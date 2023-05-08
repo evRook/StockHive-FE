@@ -2,7 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import {
   Layout,
-  Home
+  Home,
+  About,
 } from './Pages'
 
 import {
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
       <Route index element={<Home />} />
+      <Route path='/about' element={<About />} />
     </Route>
   )
 )
