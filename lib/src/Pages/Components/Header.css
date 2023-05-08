@@ -48,6 +48,10 @@
     align-items: center;
 }
 
+.header--link {
+    text-decoration: none;
+}
+
 .header--nav__container > * {
     margin-right: 10px;
 }

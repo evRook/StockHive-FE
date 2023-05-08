@@ -15,14 +15,26 @@ export default function Header() {
             </Link>
         </div>
         <div className="header--nav__container">
-            <NavBtn title='About'/>
-            <NavBtn title='Contact'/>
-            <NavBtn title='Profile'/>
-            <NavBtn title='Info'/>
+            <Link to="/about" className='header--link'>
+                <NavBtn title='About'/>
+            </Link>
+            <Link to="/" className='header--link'>
+                <NavBtn title='Contact'/>
+            </Link>
+            <Link to="/" className='header--link'>
+                <NavBtn title='Profile'/>
+            </Link>
+            <Link to="/" className='header--link'>
+                <NavBtn title='Info'/>
+            </Link>
         </div>
         <div className="header--btn__container">
-            <WireBtn title='Log in' />
-            <SolidBtn title='Sign up'/>
+            <Link to="/" className='header--link'>
+                <WireBtn title='Log in' />
+            </Link>
+            <Link to="/" className='header--link'>
+                <SolidBtn title='Sign up'/>
+            </Link>
         </div>
     </div>
   );
