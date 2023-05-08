@@ -1,3 +1,32 @@
 .header--container {
-    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border: 2px solid grey;
+}
+
+.header--logo__link {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    text-decoration: none;
+}
+
+.header--logo__container { 
+    margin-left: 30px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.header--logo {
+    height: 100px;
+}
+
+.header--logo--title {
+    color: black;
+    margin: 0px;
+    font-size: 35px;
 }
