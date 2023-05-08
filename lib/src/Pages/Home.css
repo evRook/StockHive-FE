@@ -1,0 +1,41 @@
+.home--header__container {
+    border: 2px solid grey;
+    height: 600px;
+    display: flex;
+}
+
+.home--header--img {
+    width: 40%;
+    height: 100%;
+    background-color: orange;
+    border: 2px solid grey;
+}
+
+
+
+.home--header--content {
+    height: 100%;
+    width: 60%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home--header--text {
+    padding: 0 100px;
+}   
+
+.home--ticker__container {
+    border: 2px solid grey;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home--content__container {
+    border: 2px solid grey;
+    height: 1200px;
+}
