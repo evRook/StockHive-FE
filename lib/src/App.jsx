@@ -4,6 +4,8 @@ import {
   Layout,
   Home,
   About,
+  Login,
+  SignUp,
 } from './Pages'
 
 import {
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
       <Route index element={<Home />} />
       <Route path='/about' element={<About />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/signup' element={<SignUp />} />
     </Route>
   )
 )
