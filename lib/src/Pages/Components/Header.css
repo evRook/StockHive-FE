@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: end;
-    border: 2px solid grey;
 }
 
 .header--logo__link {
@@ -47,4 +46,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.header--nav__container > * {
+    margin-right: 10px;
 }
