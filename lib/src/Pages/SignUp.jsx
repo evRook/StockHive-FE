@@ -50,8 +50,9 @@ export default function SignUp() {
                     </form>
                 </div>
                 <div className="signup--link__container">
+                    <p>Already a User?</p>
                     <Link to="/login" className='header--link'>
-                        <p>Already a User?</p>
+                        <p>Log In</p>    
                     </Link>
                 </div>
             </div>
