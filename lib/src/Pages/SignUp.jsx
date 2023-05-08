@@ -8,8 +8,8 @@ export default function SignUp() {
 
             </div>
             <div className="signup--content__container">
-                <div className="sigup--title__container">
-                    <p className="sigup--title">
+                <div className="signup--title__container">
+                    <p className="signup--title">
                         Sign Up
                     </p>
                 </div>
@@ -45,6 +45,7 @@ export default function SignUp() {
                             name='Confirm Password'
                             type="password confirm" 
                         />
+                        <button type='submit'>Sign Up</button>
                     </form>
                 </div>
             </div>
