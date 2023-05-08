@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { LoginBtn } from './index'
+import { WireBtn } from './index'
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -15,8 +15,8 @@ export default function Header() {
             </Link>
         </div>
         <div className="header--btn__container">
-            <LoginBtn />
-            
+            <WireBtn title='Log in' />
+
         </div>
     </div>
   );
