@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { LoginBtn } from './index'
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -12,6 +13,10 @@ export default function Header() {
                 </div>
                 <p className="header--logo--title">StockHive</p>
             </Link>
+        </div>
+        <div className="header--btn__container">
+            <LoginBtn />
+            
         </div>
     </div>
   );
