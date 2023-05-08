@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { WireBtn } from './index'
+import { WireBtn, SolidBtn } from './index'
 import { Link } from "react-router-dom";
 
 export default function Header() {
@@ -16,7 +16,7 @@ export default function Header() {
         </div>
         <div className="header--btn__container">
             <WireBtn title='Log in' />
-
+            <SolidBtn title='Sign up'/>
         </div>
     </div>
   );

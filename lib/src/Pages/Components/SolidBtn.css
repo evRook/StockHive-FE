@@ -1,0 +1,9 @@
+.solid--btn {
+    color: white;
+    background-color: orange;
+    height: 30px;
+    width: 75px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}

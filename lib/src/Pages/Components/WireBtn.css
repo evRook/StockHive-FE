@@ -1,7 +1,9 @@
 .wire--btn {
-    color: black;
+    color: orange;
     height: 30px;
     width: 75px;
-    border: 1px solid black;
+    background-color: white;
+    border: 1px solid orange;
     border-radius: 25px;
+    cursor: pointer;
 }
