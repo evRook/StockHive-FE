@@ -1,6 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import { WireBtn, SolidBtn, NavBtn } from './index'
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -8,14 +9,26 @@ export default function Footer() {
         <div className="footer--content">
             <div className="footer--links__container">
                 <div className="footer--nav__container">
-                    <NavBtn title='Product'/> 
-                    <NavBtn title='Creator'/> 
-                    <NavBtn title='Disclosures'/>
-                    <NavBtn title='About'/>
+                    <Link to="/" className='header--link'>
+                        <NavBtn title='Product'/>
+                    </Link> 
+                    <Link to="/" className='header--link'>
+                        <NavBtn title='Creator'/>
+                    </Link> 
+                    <Link to="/" className='header--link'>
+                        <NavBtn title='Disclosures'/>
+                    </Link>
+                    <Link to="/about" className='header--link'>
+                        <NavBtn title='About'/>
+                    </Link>
                 </div>
                 <div className="footer--btn__container">
-                    <WireBtn title='Log in' />
-                    <SolidBtn title='Sign up'/>
+                    <Link to="/login" className='header--link'>
+                        <WireBtn title='Log in' />
+                    </Link>
+                    <Link to="/signup" className='header--link'>
+                        <SolidBtn title='Sign up'/>
+                    </Link>
                 </div>
             </div>
             <div className="footer--legal__container">
