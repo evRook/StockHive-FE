@@ -1,0 +1,21 @@
+.about--container {
+    display: flex;
+    min-height: 800px;
+}
+
+.about--content {
+    border: 2px solid grey;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+}
+
+.about--img__container {
+    border: 2px solid grey;
+    width: 100%;
+    min-height: 800px;
+    background-color: orange;
+}
+

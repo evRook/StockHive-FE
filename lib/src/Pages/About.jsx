@@ -13,6 +13,9 @@ export default function About() {
                     </p>   
                 </div>
             </div>
+            <div className="about--img__container">
+
+            </div>
         </div>
      );
 }
