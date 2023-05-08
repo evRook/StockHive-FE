@@ -29,10 +29,10 @@ export default function Header() {
             </Link>
         </div>
         <div className="header--btn__container">
-            <Link to="/" className='header--link'>
+            <Link to="/login" className='header--link'>
                 <WireBtn title='Log in' />
             </Link>
-            <Link to="/" className='header--link'>
+            <Link to="/signup" className='header--link'>
                 <SolidBtn title='Sign up'/>
             </Link>
         </div>
