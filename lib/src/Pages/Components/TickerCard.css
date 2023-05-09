@@ -1,0 +1,14 @@
+.tickerCard--container { 
+    border: 2px solid grey;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+}
+
+.tickerCard--content {
+    border: 2px solid grey;
+}
+
+.tickerCard--content > * {
+    margin: 0;
+}
