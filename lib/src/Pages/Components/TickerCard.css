@@ -9,6 +9,6 @@
     border: 2px solid grey;
 }
 
-.tickerCard--content > * {
+.tickerCard--text > * {
     margin: 0;
 }
