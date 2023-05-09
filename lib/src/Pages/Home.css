@@ -11,8 +11,6 @@
     border: 2px solid grey;
 }
 
-
-
 .home--header--content {
     height: 100%;
     width: 60%;
@@ -29,7 +27,6 @@
 
 .home--ticker__container {
     border: 2px solid grey;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;

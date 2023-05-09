@@ -1,0 +1,20 @@
+@keyframes ticker {
+    0% { transform: translate3d(80%, 0, 0); }
+    100% { transform: translate3d(-80%, 0, 0); }
+  }
+
+.ticker--content {
+    display: flex;
+    align-items: center;
+    animation: ticker linear 25s infinite;
+}
+.ticker--content:hover { 
+    animation-play-state: paused; 
+}
+
+.ticker--card__container { 
+    border: 2px solid grey;
+    padding: 10px;
+    height: 100px;
+    width: 150px;
+}
