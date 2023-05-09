@@ -11,7 +11,7 @@ export default function TickerCard() {
                     <p className="tickerCard--close">126.77</p>
                 </div>
                 <div className="tickerCard--icon">
-                    
+                    {/* gain or loss icon */}
                 </div>
             </div>
         </div>

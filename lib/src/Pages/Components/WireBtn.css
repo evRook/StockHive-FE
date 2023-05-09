@@ -1,9 +1,16 @@
 .wire--btn {
-    color: orange;
+    color: #fb9632;
     height: 30px;
     width: 75px;
-    background-color: white;
-    border: 1px solid orange;
+    background-color: #FFFFFF;
+    border: 1px solid #fb9632;
     border-radius: 25px;
     cursor: pointer;
+    transition: 0.1s;
+}
+
+.wire--btn:hover {
+    color: #FFFFFF;
+    border: 1px solid #ff8b18;
+    background-color: #ff8b18;
 }

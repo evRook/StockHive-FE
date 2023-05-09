@@ -3,11 +3,17 @@
     100% { transform: translate3d(-80%, 0, 0); }
   }
 
+.ticker--container {
+    overflow: hidden;
+}
+
 .ticker--content {
     display: flex;
+    
     align-items: center;
     animation: ticker linear 25s infinite;
 }
+
 .ticker--content:hover { 
     animation-play-state: paused; 
 }

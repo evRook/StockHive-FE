@@ -1,9 +1,13 @@
 .solid--btn {
-    color: white;
-    background-color: orange;
+    color: #FFFFFF;
+    background-color: #fb9632;
     height: 30px;
     width: 75px;
     border: none;
     border-radius: 25px;
     cursor: pointer;
+}
+
+.solid--btn:hover {
+    background-color: #ff8b18;
 }

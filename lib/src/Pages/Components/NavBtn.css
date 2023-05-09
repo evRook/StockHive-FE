@@ -4,13 +4,13 @@
     justify-content: center;
     align-items: end;
     border: none;
-    background-color: white;
+    background-color: #FFFFFF;
     font-size: 15px;
     transition: 0.1s;
     cursor: pointer;
 }
 
 .nav--btn:hover {
-    border-bottom: 3px solid orange;
+    border-bottom: 3px solid #fb9632;
     transition: 0.1s;
 }
