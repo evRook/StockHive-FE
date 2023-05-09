@@ -2,8 +2,14 @@ import React from "react";
 import "./Home.css";
 import { WireBtn, SolidBtn, NavBtn, Ticker } from './Components'
 import { Link } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
-export default function Home() {
+
+
+export default function Home(props) {
+    const cd = useLoaderData();
+    // console.log(cd)
+
     return ( 
         <div className="home--container">
             <div className="home--header__container">
@@ -18,7 +24,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="home--ticker__container">
-                <Ticker />
+                <Ticker props={cd}/>
             </div>
             <div className="home--content__container">
                     

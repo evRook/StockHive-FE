@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+
 import {
   Layout,
   Home,
@@ -15,10 +15,14 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import{
+  companyLoader,
+} from './loaders'
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route index element={<Home />} />
+      <Route index element={<Home />} loader={companyLoader}/>
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<SignUp />} />
