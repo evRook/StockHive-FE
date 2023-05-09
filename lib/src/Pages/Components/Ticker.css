@@ -12,9 +12,3 @@
     animation-play-state: paused; 
 }
 
-.ticker--card__container { 
-    border: 2px solid grey;
-    padding: 10px;
-    height: 100px;
-    width: 150px;
-}
