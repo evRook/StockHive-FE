@@ -7,8 +7,8 @@ import { useLoaderData } from "react-router-dom";
 
 
 export default function Home(props) {
-    const cd = useLoaderData();
-    // console.log(cd)
+    const companyData = useLoaderData();
+    console.log(companyData)
 
     return ( 
         <div className="home--container">
@@ -24,7 +24,7 @@ export default function Home(props) {
                 </div>
             </div>
             <div className="home--ticker__container">
-                <Ticker props={cd}/>
+                <Ticker />
             </div>
             <div className="home--content__container">
                     

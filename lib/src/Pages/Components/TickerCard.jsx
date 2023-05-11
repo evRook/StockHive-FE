@@ -5,11 +5,11 @@ import './TickerCard.css'
 export default function TickerCard(props) {
     return ( 
         <div className="tickerCard--container">
-            <p className="tickerCard--title">{props.props[0].Symbol}</p>
+            <p className="tickerCard--title">{props.symbol}</p>
             <div className="tickerCard--content">
                 <div className="tickerCard--text">
-                    <p className="tickerCard--open">125.46</p>
-                    <p className="tickerCard--close">126.77</p>
+                    <p className="tickerCard--open">125.46{props.open}</p>
+                    <p className="tickerCard--close">126.77{props.close}</p>
                 </div>
                 <div className="tickerCard--icon">
                     {/* gain or loss icon */}
