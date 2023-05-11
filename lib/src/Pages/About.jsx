@@ -9,7 +9,16 @@ export default function About() {
                 <p className="about--title">About</p>
                 <div className="about--text__container">
                     <p className="about--text">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <br/> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        StockHive is the perfect tool for investors looking to stay up-to-date on the latest market trends and track their investments with ease. Our app offers real-time stock quotes, market news, and personalized watchlists to help you make informed investment decisions.
+                        <br/>
+                        <br/>
+                        With our user-friendly interface, you can easily search and add stocks to your watchlist, and receive customizable alerts for significant changes in stock prices or market indices. Our app also provides access to detailed stock charts and financial data, so you can conduct in-depth analysis of individual companies and industries.
+                        <br/>
+                        <br/>
+                        Our team of expert analysts curates the latest financial news and analysis from reputable sources, so you can stay informed and ahead of the curve. We also offer educational resources and investment tips to help users of all experience levels navigate the complex world of stock investing.
+                        <br/>
+                        <br/>
+                        At our core, we believe in empowering our users to make informed decisions about their investments, and we strive to provide the most accurate and up-to-date information possible. Whether you're a seasoned investor or just getting started, our stock tracking app is the perfect tool to help you achieve your financial goals.
                     </p>   
                 </div>
             </div>
