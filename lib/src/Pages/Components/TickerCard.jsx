@@ -8,8 +8,8 @@ export default function TickerCard(props) {
             <p className="tickerCard--title">{props.symbol}</p>
             <div className="tickerCard--content">
                 <div className="tickerCard--text">
-                    <p className="tickerCard--open">125.46{props.open}</p>
-                    <p className="tickerCard--close">126.77{props.close}</p>
+                    <p className="tickerCard--open">{props.high}</p>
+                    <p className="tickerCard--close">{props.low}</p>
                 </div>
                 <div className="tickerCard--icon">
                     {/* gain or loss icon */}

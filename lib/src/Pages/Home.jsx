@@ -26,7 +26,7 @@ export default function Home(props) {
                     </Link>
                 </div>
                 <div className="home--ticker__container">
-                        <Ticker />
+                        <Ticker data={companyData}/>
                 </div>
             </div>
             
