@@ -1,21 +1,40 @@
 import React, { useState }from 'react';
 import './Login.css'
 import { Link, Redirect } from "react-router-dom";
+import axios from 'axios'
+import Cookies from 'js-cookie';
 
 export default function Login() {
-    const [data, setData] = useState({email: '', password: ''})
-    const {email, password} = data
-
-    const onChange = (e) => {
-        setData({
-            ...data,
-            [e.target.name]: e.target.value
-        })
-    }
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
     
-    const onSubmit = (e) => {
-        e.preventDefault()
+    function handleSubmit(e){
+        const data = {
+            email: email,
+            password: password
+        }
+
+        const csrfToken = Cookies.get('csrftoken');
+
+        const headers = {
+            headers: {
+                'Content-type': 'application/json',
+                'X-CSRFToken': csrfToken,
+            }
+        }
+
+        const dataStr = JSON.stringify(data)
+
+        axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
+            .then((response) => {response.json()})
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }
+
 
     return ( 
         <div className="login--container">
@@ -29,15 +48,15 @@ export default function Login() {
                 <div className="login--form__container">
                     <form 
                         className='login--form' 
-                        onSubmit = {(e) => {
-                            e.preventDefault()
-                        }}
+                        onSubmit = {handleSubmit}
                     >
                         <label>Email</label>
                         <input 
                             name='email'
                             type='email'
                             placeholder='Email'
+                            value={email}
+                            onChange={(e) => {setEmail(e.target.value)}}
                             required
                         />
                         <label>Password:</label>
@@ -46,6 +65,8 @@ export default function Login() {
                             type='password'
                             placeholder='Password'
                             minLength='8'
+                            value={password}
+                            onChange={(e) => {setPassword(e.target.value)}}
                             required 
                         />
                         <button type='submit'>Log In</button>
