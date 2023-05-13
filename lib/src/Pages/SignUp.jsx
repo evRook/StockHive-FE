@@ -31,11 +31,6 @@ export default function SignUp() {
                             name='Email'
                             type="text" 
                         />
-                        <label>User Name</label>
-                        <input 
-                            name='User Name'
-                            type="text" 
-                        />
                         <label>Password:</label>
                         <input 
                             name='Password'
