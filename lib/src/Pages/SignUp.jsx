@@ -1,10 +1,12 @@
 import React, { useState }from 'react';
 import './SignUp.css'
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 import Cookies from 'js-cookie';
 
 export default function SignUp() {
+    const navigate = useNavigate()
+
     const [first, setFirst] = useState('')
     const [last, setLast] = useState('')
     const [email, setEmail] = useState('')
@@ -45,6 +47,7 @@ export default function SignUp() {
                 console.log(error)
             })
 
+        navigate('/login')
     }
 
 
