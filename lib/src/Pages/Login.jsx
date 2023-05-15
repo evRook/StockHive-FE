@@ -76,11 +76,12 @@ export default function Login() {
                 </div>
                 <div className="signup--link__container">
                     <p>Not a Member?</p>
-                    <Link to="/login" className='header--link'>
+                    <Link to="/signup" className='header--link'>
                         <p>Create Account</p>
                     </Link>
+                    <p>Forgot your Password?</p>
                     <Link to="/reset_password" className='header--link'>
-                        <p>Forgot your Password?</p>
+                        <p>Reset Password</p>
                     </Link>
                 </div>
             </div>
