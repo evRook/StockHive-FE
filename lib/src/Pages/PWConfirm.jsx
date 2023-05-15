@@ -3,6 +3,10 @@ import './PWConfirm.css'
 
 export default function PWConfirm() {
     return ( 
-        <p>Hello PWConfirm</p>
+        <div className="PWConfirm--container">
+            <p className="PWConfirm--text">
+                Your Password has been updated. 
+            </p>
+        </div>
      );
 }
