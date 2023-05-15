@@ -14,7 +14,7 @@ export default function Login() {
             password: password
         }
 
-        const csrfToken = Cookies.get('csrftoken');
+        const csrfToken = Cookies.get('csrftoken')
 
         const headers = {
             headers: {
@@ -26,7 +26,9 @@ export default function Login() {
         const dataStr = JSON.stringify(data)
 
         axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
-            .then((response) => {response.json()})
+            .then((response) => {
+                response.json()
+            })
             .then((response) => {
                 console.log(response)
             })
@@ -50,7 +52,7 @@ export default function Login() {
                         className='login--form' 
                         onSubmit = {handleSubmit}
                     >
-                        <label>Email</label>
+                        <label>Email:</label>
                         <input 
                             name='email'
                             type='email'
