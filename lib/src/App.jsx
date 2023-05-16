@@ -10,6 +10,7 @@ import {
   PWConfirm,
   Verify,
   Contact,
+  Profile,
 } from './Pages'
 
 import {
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<SignUp />} />
       <Route path='/contact' element={<Contact />} />
+      <Route path='/profile' element={<Profile />} />
       <Route path='/reset_password' element={<PWReset />} />
       <Route path='/password/reset/confirm/:uid/:token' element={<PWConfirm />} />
       <Route path='/activation/:uid/:token' element={<Verify />} />
