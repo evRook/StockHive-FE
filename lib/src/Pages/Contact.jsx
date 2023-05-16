@@ -26,7 +26,7 @@ export default function Contact() {
                             type='email'
                             placeholder='Email'
                         />
-                        <label>Comments & Questions:</label>
+                        <label>Message:</label>
                         <textarea 
                             name='comments'
                             type='text'

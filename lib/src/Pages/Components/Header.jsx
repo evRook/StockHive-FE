@@ -18,10 +18,10 @@ export default function Header() {
             <Link to="/about" className='header--link'>
                 <NavBtn title='About'/>
             </Link>
-            <Link to="/" className='header--link'>
+            <Link to="/contact" className='header--link'>
                 <NavBtn title='Contact'/>
             </Link>
-            <Link to="/" className='header--link'>
+            <Link to="/profile" className='header--link'>
                 <NavBtn title='Profile'/>
             </Link>
             <Link to="/" className='header--link'>
