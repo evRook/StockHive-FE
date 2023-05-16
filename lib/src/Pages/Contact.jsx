@@ -4,14 +4,15 @@ import './Contact.css'
 export default function Contact() {
     return ( 
         <div className="contact--container">
-            <div className="signup--title__container">
-                    <p className="signup--title">
-                        Sign Up
+            <div className="contact--content__container">
+                <div className="contact--title__container">
+                    <p className="contact--title">
+                        Contact Us
                     </p>
                 </div>
-                <div className="signup--form__container">
+                <div className="contact--form__container">
                     <form 
-                        className='signup--form'
+                        className='contact--form'
                     >
                         <label>Name:</label>
                         <input 
@@ -35,6 +36,7 @@ export default function Contact() {
                         <button type='submit'>Sign Up</button>
                     </form>
                 </div>
+            </div>
         </div>
      );
 }

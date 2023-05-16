@@ -1,0 +1,26 @@
+.contact--container {
+    height: 800px;  
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.contact--title__container {
+    padding: 0 100px;
+}
+
+.contact--form__container {
+    width: 600px;
+    padding: 20px 100px;
+}
+
+.contact--form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.contact--form > * {
+    margin-bottom: 10px;
+}
