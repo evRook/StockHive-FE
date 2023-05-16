@@ -1,0 +1,18 @@
+.PWReset--container {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.PWReset--form__container > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.PWReset--form > * {
+    margin-bottom: 10px;
+}
