@@ -47,7 +47,7 @@ export default function PWReset() {
         <div className="PWReset--container">
             <div className="PWReset--content__container">
                 <div className="PWReset--title__container">
-                    <p className="PWReset  --title">Reset Password</p>
+                    <p className="PWReset--title">Reset Password</p>
                 </div>
                 <div className="PWReset--form__container">
                     <form 
@@ -63,7 +63,7 @@ export default function PWReset() {
                             onChange={(e) => {setEmail(e.target.value)}}
                             required 
                         />
-                        <button type='submit'>Log In</button>
+                        <button type='submit'>Send</button>
                     </form>
                 </div>
             </div>

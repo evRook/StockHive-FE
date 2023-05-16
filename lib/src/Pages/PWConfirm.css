@@ -1,6 +1,18 @@
 .PWConfirm--container {
     height: 800px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.PWConfirm--form__container > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.PWConfirm--form > * {
+    margin-bottom: 10px;
 }
