@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { WireBtn, SolidBtn, NavBtn } from './index'
 import { Link } from "react-router-dom";
+import { LogOut } from '../../Utils/LogOut'
+
 
 export default function Header() {
+
   return (
     <div className="header--container">
         <div className="header--content">
@@ -34,6 +37,9 @@ export default function Header() {
             </Link>
             <Link to="/signup" className='header--link'>
                 <SolidBtn title='Sign up'/>
+            </Link>
+            <Link to="/about" className='header--link'>
+                <SolidBtn title='Log Out' onClick={LogOut}/>
             </Link>
         </div>
     </div>

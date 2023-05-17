@@ -29,16 +29,20 @@ export default function Login() {
 
         axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
             .then((response) => {
-                response.json()
-            })
-            .then((response) => {
-                console.log(response)
+                if(response.data.access){
+                    localStorage.setItem('user', JSON.stringify(response.data))
+                }
+                return response.data
             })
             .catch((error) => {
                 console.log(error)
             })
+        
+        const user = JSON.parse(localStorage.getItem('user'))
+        console.log(user)
 
-            navigate('/')
+        navigate('/profile')
+
     }
 
 
