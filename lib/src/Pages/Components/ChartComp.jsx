@@ -32,7 +32,6 @@ export default function ChartComp(props) {
     const generateDatesInRange = (startDate, dataLength) => {
         const dates = [];
         const currentDate = new Date();
-        console.log(currentDate)
     
         for (let i = dataLength - 1; i >= 0; i--) {
           dates.push(currentDate.toDateString())
