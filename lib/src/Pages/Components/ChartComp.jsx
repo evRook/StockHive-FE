@@ -13,8 +13,10 @@ export default function ChartComp(props) {
                 label: props.symbol,
                 data: props.close,
                 fill: false,
-                borderColor: 'red',
-                backgroundColor: 'red',
+                borderWidth: 1,
+                borderColor: '#eb821aef',
+                backgroundColor: '#00000000',
+                fontColor: '#eb821aef',
             }
         ]
     }
@@ -22,9 +24,32 @@ export default function ChartComp(props) {
     const options = {
         responsive: true,
         maintainAspectRatio: true,
-        scale: {
+        scales: {
             y: {
-                beginAtZero: true
+                grid: {
+                    display: true,
+                    color: '#00000010',
+                    lineWidth: 1,
+                }, 
+                ticks: {
+                    font: {
+                        size: 8,
+                      },
+                      color: '#666666',
+                }
+            },
+            x: {
+                grid: {
+                    display: true,
+                    color: '#00000010',
+                    lineWidth: 1,
+                }, 
+                ticks: {
+                    font: {
+                        size: 8,
+                      },
+                      color: '#666666',
+                }
             }
         }
     }
