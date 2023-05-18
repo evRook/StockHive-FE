@@ -1,0 +1,46 @@
+.db--container {
+    width: 1200px;
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.db--header__container {
+    width: 100%;
+}
+
+.db--title {
+    display: flex;
+    align-items: end;
+}
+
+.db--title--text {
+    margin: 15px 10px;
+    font-size: 30px;
+}
+
+.db--title--ticker {
+    font-size: 12px;
+    margin-bottom: 17px;
+}
+
+.db--content__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    border: 2px solid grey;
+}
+
+.db--chart__container {
+    width: 600px;
+    border: 2px solid grey;
+}
+
+.db--doghnut__container {
+    border: 2px solid grey;
+    width: 200px;
+    height: 200px;
+}

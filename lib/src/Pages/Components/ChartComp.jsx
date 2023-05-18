@@ -21,7 +21,7 @@ export default function ChartComp(props) {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         scale: {
             y: {
                 beginAtZero: true
@@ -48,8 +48,6 @@ export default function ChartComp(props) {
         <div className="chart--container">
             <Line
                 data={data}
-                height={400}
-                width={600}
                 options={options}
             ></Line>
         </div>

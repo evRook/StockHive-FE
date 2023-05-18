@@ -41,10 +41,26 @@ export default function DashBoard() {
 
     return ( 
         <div className="db--container">
-            <div className="db--chart__container">
-            <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
-                <DoughnutComp risk={company[0].overallRisk}/>
-            </div> 
+            <div className="db--header__container">
+                <div className="db--title">
+                    <p className="db--title--text">
+                        {company[0].shortName}
+                    </p>
+                    <p className="db--title--ticker">
+                        {company[0].symbol}
+                    </p>
+                </div>
+            </div>
+            <div className="db--content__container">
+                <div className="db--doghnut__container">
+                    <DoughnutComp risk={company[0].overallRisk}/>
+                </div>
+                <div className="db--chart__container">
+                    <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
+                </div>
+               
+            </div>
+            
         </div>
      );
 }

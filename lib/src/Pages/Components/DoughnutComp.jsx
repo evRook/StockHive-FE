@@ -40,6 +40,8 @@ export default function DoughnutComp(props) {
             <Doughnut 
                 data={data}
                 options={options}
+                height={250}
+                width={900}
             />
         </div>
      );
