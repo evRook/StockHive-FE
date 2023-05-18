@@ -1,4 +1,4 @@
-import React, { useState }from 'react';
+import React, { useState, useEffect }from 'react';
 import './Login.css'
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
@@ -9,8 +9,21 @@ export default function Login() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [isAuth, setIsAuth] = useState(false)
+
+    let user = JSON.parse(localStorage.getItem('user'))
+
+    
+    useEffect(() => {
+        if(user.access !== null){
+            setIsAuth(true)
+        }
+    }, [isAuth])
+
     
     function handleSubmit(e){
+        e.preventDefault()
+
         const data = {
             email: email,
             password: password
@@ -29,19 +42,24 @@ export default function Login() {
 
         axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
             .then((response) => {
+                localStorage.clear()
                 if(response.data.access){
                     localStorage.setItem('user', JSON.stringify(response.data))
+                    alert('Logged In Successfully')
                 }
+                // console.log(response)
                 return response.data
             })
             .catch((error) => {
                 console.log(error)
             })
         
-        const user = JSON.parse(localStorage.getItem('user'))
-        console.log(user)
+        // const user = JSON.parse(localStorage.getItem('user'))
+        // console.log(user)
 
-        navigate('/profile')
+        console.log(isAuth)
+
+        navigate('/profile', {state: isAuth})
 
     }
 
