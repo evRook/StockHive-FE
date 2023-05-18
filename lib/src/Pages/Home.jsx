@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { WireBtn, SolidBtn, NavBtn, Ticker } from './Components'
+import { WireBtn, SolidBtn, NavBtn, Ticker, SearchBar } from './Components'
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 
@@ -13,7 +13,6 @@ export default function Home(props) {
     return ( 
         <div className="home--container">
             <div className="home--header__container">
-                {/* <img src={require('./Components/img/hexagon.webp')} alt="" className="home--header--img"/> */}
                 <div className="home--header--content">
                     <p className="home--header--text">
                         StockHive 

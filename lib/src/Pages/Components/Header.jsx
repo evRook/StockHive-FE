@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import { WireBtn, SolidBtn, NavBtn } from './index'
+import { WireBtn, SolidBtn, NavBtn, SearchBar } from './index'
 import { Link, useLocation } from "react-router-dom";
 import { LogOut } from '../../Utils/LogOut'
 
@@ -21,18 +21,23 @@ export default function Header() {
                     <p className="header--logo--title">StockHive</p>
                 </Link>
             </div>
-            <div className="header--nav__container">
-                <Link to="/about" className='header--link'>
-                    <NavBtn title='About'/>
-                </Link>
-                <Link to="/contact" className='header--link'>
-                    <NavBtn title='Contact'/>
-                </Link>
-                {isAuth ? 
-                    <Link to="/profile" className='header--link'>
-                        <NavBtn title='Profile'/>
+            <div className="header--center__container">
+                <div className="header--nav__container">
+                    <Link to="/about" className='header--link'>
+                        <NavBtn title='About'/>
                     </Link>
-                : null }
+                    <Link to="/contact" className='header--link'>
+                        <NavBtn title='Contact'/>
+                    </Link>
+                    {isAuth ? 
+                        <Link to="/profile" className='header--link'>
+                            <NavBtn title='Profile'/>
+                        </Link>
+                    : null }
+                </div>
+                <div className="header--search__container">
+                    <SearchBar />
+                </div>
             </div>
             <div className="header--btn__container">
                     {isAuth ? 
