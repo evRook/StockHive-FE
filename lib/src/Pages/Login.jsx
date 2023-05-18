@@ -14,11 +14,11 @@ export default function Login() {
     let user = JSON.parse(localStorage.getItem('user'))
 
     
-    useEffect(() => {
-        if(user.access !== null){
-            setIsAuth(true)
-        }
-    }, [isAuth])
+    // useEffect(() => {
+    //     if(user.access !== null){
+    //         setIsAuth(true)
+    //     }
+    // }, [isAuth])
 
     
     function handleSubmit(e){
