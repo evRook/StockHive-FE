@@ -33,7 +33,7 @@ export default function ChartComp(props) {
                 }, 
                 ticks: {
                     font: {
-                        size: 8,
+                        size: 10,
                       },
                       color: '#cccccc',
                 }
@@ -46,7 +46,7 @@ export default function ChartComp(props) {
                 }, 
                 ticks: {
                     font: {
-                        size: 8,
+                        size: 10,
                       },
                       color: '#cccccc',
                 }

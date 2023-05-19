@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './DashBoard.css'
 import axios from 'axios'
+import { HiOutlineChevronDoubleUp, HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { useLocation } from "react-router-dom";
 import { ChartComp, DoughnutComp, SearchBar } from './index'
 
@@ -14,7 +15,9 @@ export default function DashBoard() {
         }
     ])
     const [company, setCompany] = useState([
-        {
+        {   
+            fiftyTwoWeekHigh: 0,
+            fiftyTwoWeekLow: 0,
             overallRisk: 0,
         }
     ])
@@ -72,6 +75,17 @@ export default function DashBoard() {
                                 <p>0</p>
                                 <p>10</p>
                             </div>
+                        </div>
+                    </div>
+                    <div className="db--yearstat__container">
+                        <div className="db--yearstat--txt">
+                            <p className="db--yearstat--title">YTD</p>
+                        </div>
+                        <div className="db--yearstat">
+                            <p className="db--yearstat--high">High<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/> {company[0].fiftyTwoWeekHigh.toFixed(2)}</p>
+                        </div>
+                        <div className="db--yearstat">
+                            <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/>   {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
                         </div>
                     </div>
                     

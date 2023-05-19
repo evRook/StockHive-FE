@@ -47,9 +47,9 @@
 }
 
 .db--text__container {
-    width: 98.3%;
-    margin: 10px 10px 0px 10px;
-    padding: 10px;
+    width: 95.7%;
+    margin: 0px 10px 0px 10px;
+    padding: 10px 25px;
     font-size: 12px;
     border-radius: 10px;
     background-image: linear-gradient(215deg, #36363c, #31313a, #000109);
@@ -117,18 +117,36 @@
     color: #fe9320;
 }
 
-.db--doghnut__container1 {
-    width: 160px;
-    height: 160px;
-    padding: 10px;
-    border-radius: 10px;
-    background-image: linear-gradient(215deg, #c05300, #f9be80, #fab265);
-    color: #393939;
-}
-
 .db--doughnut--rank {
     width: 90%;
     display: flex;
     justify-content: space-around;
     color: #fe9320;
+}
+
+.db--yearstat__container {
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(215deg, #36363c, #282837, #000109);
+    color: #fe9320;
+}
+
+.db--yearstat--title {
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.db--yearstat {
+    display: flex;
+    align-items: center;
+}
+
+.db--yearstat > * {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
 }
