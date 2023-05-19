@@ -1,14 +1,27 @@
 .db--container {
     width: 1200px;
-    border: 2px solid grey;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(215deg, #ffe3c5, #fed1a0, #fdc486);
 }
 
 .db--header__container {
     width: 100%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    border-radius: 10px;
+    background-image: linear-gradient(215deg, #fecf9d, #fbc48a, #fab265);
+    color: #fff2e4;
+}
+
+.db--header--search {
+    margin: 10px;
 }
 
 .db--title {

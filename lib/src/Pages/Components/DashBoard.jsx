@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './DashBoard.css'
 import axios from 'axios'
-import { ChartComp, DoughnutComp } from './index'
+import { useLocation } from "react-router-dom";
+import { ChartComp, DoughnutComp, SearchBar } from './index'
 
 export default function DashBoard() {
+    const { state } = useLocation()
+    const { search, scope } = state
+
     const [chart, setChart] = useState([
         {   
             symbol: 'Null',
@@ -47,8 +51,11 @@ export default function DashBoard() {
                         {company[0].shortName}
                     </p>
                     <p className="db--title--ticker">
-                        {company[0].symbol}
+                        ({company[0].symbol})
                     </p>
+                </div>
+                <div className="db--header--search">
+                    <SearchBar />
                 </div>
             </div>
             <div className="db--content__container">
@@ -58,9 +65,7 @@ export default function DashBoard() {
                 <div className="db--chart__container">
                     <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
                 </div>
-               
             </div>
-            
         </div>
      );
 }
