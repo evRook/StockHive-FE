@@ -6,7 +6,10 @@ export default function About() {
     return ( 
         <div className="about--container">
             <div className="about--content">
-                <p className="about--title">About</p>
+                <div className="about--title__container">
+                    <p className="about--title">About</p>
+                    <img src={require('./Components/img/logo.png')} alt="" className="about--img" />        
+                </div>
                 <div className="about--text__container">
                     <p className="about--text">
                         StockHive is the perfect tool for investors looking to stay up-to-date on the latest market trends and track their investments with ease. Our app offers real-time stock quotes, market news, and personalized watchlists to help you make informed investment decisions.
@@ -23,7 +26,6 @@ export default function About() {
                 </div>
             </div>
             <div className="about--img__container">
-
             </div>
         </div>
      );

@@ -1,21 +1,55 @@
 .about--container {
     display: flex;
     min-height: 800px;
+    padding: 100px 100px 100px 100px;
+    background-image: linear-gradient(-215deg, #36363c, #31313a, #000109);
+    
 }
 
 .about--content {
-    border: 2px solid grey;
-    padding: 50px;
+    height: 600px;
+    width: 800px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-image: linear-gradient(215deg, #36363c, #282839, #000109);
+}
+
+.about--title__container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.about--title {
+    font-size: 35px;
+    color: #fe9320;
 }
 
 .about--img__container {
-    border: 2px solid grey;
     width: 100%;
     min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: orange;
+    background-image: url('./Components/img/drmakete-lab-hsg538WrP0Y-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: inset 0px 0px 30px 30px;
+}
+
+.about--text__container {
+    color: #feeddb;
+}
+
+.about--img {
+    height: 100px;
 }
 
