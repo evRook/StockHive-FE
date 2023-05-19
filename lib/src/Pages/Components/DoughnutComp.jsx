@@ -11,7 +11,7 @@ export default function DoughnutComp(props) {
         datasets: [
           {
             data: [props.risk, 4],
-            backgroundColor: ['#fb9632', '#00000000'],
+            backgroundColor: ['#fe9320', '#00000000'],
           },
         ],
       };
@@ -31,7 +31,7 @@ export default function DoughnutComp(props) {
         maintainAspectRatio: false,
         responsive: true,
         borderRadius: 50,
-        borderColor: '#00000000'
+        borderColor: '#c05300'
       }
 
 
@@ -40,7 +40,7 @@ export default function DoughnutComp(props) {
             <Doughnut 
                 data={data}
                 options={options}
-                height={250}
+                height={200}
                 width={900}
             />
         </div>

@@ -16,7 +16,7 @@ export default function ChartComp(props) {
                 borderWidth: 1,
                 borderColor: '#eb821aef',
                 backgroundColor: '#00000000',
-                fontColor: '#eb821aef',
+                fontColor: '#cccccc',
             }
         ]
     }
@@ -28,27 +28,27 @@ export default function ChartComp(props) {
             y: {
                 grid: {
                     display: true,
-                    color: '#00000010',
+                    color: '#cccccc10',
                     lineWidth: 1,
                 }, 
                 ticks: {
                     font: {
                         size: 8,
                       },
-                      color: '#666666',
+                      color: '#cccccc',
                 }
             },
             x: {
                 grid: {
                     display: true,
-                    color: '#00000010',
+                    color: '#cccccc10',
                     lineWidth: 1,
                 }, 
                 ticks: {
                     font: {
                         size: 8,
                       },
-                      color: '#666666',
+                      color: '#cccccc',
                 }
             }
         }

@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #ffe3c5, #fed1a0, #fdc486);
+    background-image: linear-gradient(-215deg, #36363c, #31313a, #000109);
 }
 
 .db--header__container {
@@ -16,8 +16,8 @@
     justify-content: space-between;
     align-items: end;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
-    color: #fff2e4;
+    background-image: linear-gradient(215deg, #36363c, #282839, #000109);
+    color: #fe9320;
 }
 
 .db--header--search {
@@ -52,8 +52,8 @@
     padding: 10px;
     font-size: 12px;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
-    color: #393939;
+    background-image: linear-gradient(215deg, #36363c, #31313a, #000109);
+    color: #e3e3e3;
 }
 
 .db--chart__container{
@@ -71,8 +71,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
-    color: #393939;
+    background-image: linear-gradient(215deg, #36363c, #31313a, #000109);
+    color: #fe9320;
 }
 
 .db--line__container > * {
@@ -92,14 +92,14 @@
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
-    color: #393939;
+    background-image: linear-gradient(215deg, #36363c, #282837, #000109);
+    color: #fe9320;
 }
 
 .db--doghnut--overlay {
     top: 0;
     left: 0;
-    height: 100%;
+    height: 90%;
     width: 100%;
     padding: 10px;
     z-index: 2;
@@ -114,7 +114,7 @@
     margin: 0;
     margin-bottom: 10px;
     font-size: 20px;
-    color: #fff2e4;
+    color: #fe9320;
 }
 
 .db--doghnut__container1 {
@@ -122,7 +122,7 @@
     height: 160px;
     padding: 10px;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
+    background-image: linear-gradient(215deg, #c05300, #f9be80, #fab265);
     color: #393939;
 }
 
@@ -130,5 +130,5 @@
     width: 90%;
     display: flex;
     justify-content: space-around;
-    color: #fff2e4;
+    color: #fe9320;
 }
