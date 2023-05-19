@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import './SearchBar.css'
 
 export default function SearchBar() {
     const navigate = useNavigate()
 
-    const [search, setSearch] = useState('aapl')
-    const [scope, setScope] = useState('1mo')
+    const [search, setSearch] = useState('')
+    const [scope, setScope] = useState('')
 
     const handleChange = (e) => {
         setSearch(e.target.value)
@@ -15,6 +15,11 @@ export default function SearchBar() {
     const handleSubmit = (e) => {
         e.preventDefault()
         navigate('/profile', {state: {search: search, scope: scope}})
+    }
+
+    function handleRefresh(scope){
+        setScope(scope)
+        window.location.reload()
     }
 
     return ( 
@@ -28,11 +33,11 @@ export default function SearchBar() {
             required
             />
             <div className="searchbar--btn__container">
-                <button className="searchbar--btn" type='submit' onClick={()=>{setScope('1mo')}} required>1mo</button>
-                <button className="searchbar--btn" type='submit' onClick={()=>{setScope('3mo')}} required>3mo</button>
-                <button className="searchbar--btn" type='submit' onClick={()=>{setScope('6mo')}} required>6mo</button>
-                <button className="searchbar--btn" type='submit' onClick={()=>{setScope('1y')}} required>1y</button>
-                <button className="searchbar--btn" type='submit' onClick={()=>{setScope('max')}} required>max</button> 
+                <button className="searchbar--btn" type='submit' onClick={()=>{handleRefresh('1mo')}} required>1mo</button>
+                <button className="searchbar--btn" type='submit' onClick={()=>{handleRefresh('3mo')}} required>3mo</button>
+                <button className="searchbar--btn" type='submit' onClick={()=>{handleRefresh('6mo')}} required>6mo</button>
+                <button className="searchbar--btn" type='submit' onClick={()=>{handleRefresh('1y')}} required>1y</button>
+                <button className="searchbar--btn" type='submit' onClick={()=>{handleRefresh('max')}} required>max</button> 
             </div>
         </form>
      );

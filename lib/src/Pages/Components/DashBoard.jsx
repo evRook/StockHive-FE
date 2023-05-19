@@ -6,8 +6,7 @@ import { ChartComp, DoughnutComp, SearchBar } from './index'
 
 export default function DashBoard() {
     const { state } = useLocation()
-    const { search, scope } = state
-
+    const { search, scope } = state || { search: 'aapl', scope: '1mo'}
     const [chart, setChart] = useState([
         {   
             symbol: 'Null',
@@ -23,7 +22,7 @@ export default function DashBoard() {
     let chartComp = null
 
     useEffect(() => {
-        axios.get('http://localhost:8000/history/aapl/1mo')
+        axios.get(`http://localhost:8000/history/${search}/${scope}`)
             .then((response) => {
                 setChart(response.data)
                 console.log(response.data)
@@ -32,7 +31,7 @@ export default function DashBoard() {
                 console.log(error)
             })
 
-        axios.get('http://localhost:8000/company/aapl')
+        axios.get(`http://localhost:8000/company/${search}`)
             .then((response) => {
                 setCompany(response.data)
                 console.log(response.data)
@@ -59,12 +58,19 @@ export default function DashBoard() {
                 </div>
             </div>
             <div className="db--content__container">
-                <div className="db--doghnut__container">
-                    <DoughnutComp risk={company[0].overallRisk}/>
-                </div>
                 <div className="db--chart__container">
-                    <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
+                    <div className="db--line__container">
+                        <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
+                    </div>
                 </div>
+                <div className="db--doghnut__container">
+                        <DoughnutComp risk={company[0].overallRisk}/>
+                </div>
+            </div>
+            <div className="db--text__container">
+                    <p className="db--text">
+                        {company[0].longBusinessSummary}
+                    </p>
             </div>
         </div>
      );

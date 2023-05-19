@@ -16,7 +16,7 @@
     justify-content: space-between;
     align-items: end;
     border-radius: 10px;
-    background-image: linear-gradient(215deg, #fecf9d, #fbc48a, #fab265);
+    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
     color: #fff2e4;
 }
 
@@ -42,18 +42,48 @@
 .db--content__container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: end;
-    border: 2px solid grey;
+    align-items: start;
+    border-radius: 10px;
 }
 
-.db--chart__container {
+.db--text__container {
+    width: 98.3%;
+    margin: 10px 10px 0px 10px;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
+    color: #393939;
+}
+
+.db--chart__container{
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.db--line__container {
     width: 600px;
-    border: 2px solid grey;
+    height: 350px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
+    color: #393939;
+}
+
+.db--line__container > * {
+    width: 100%;
 }
 
 .db--doghnut__container {
-    border: 2px solid grey;
     width: 200px;
     height: 200px;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: linear-gradient(215deg, #fab265, #f9be80, #fab265);
+    color: #393939;
 }
