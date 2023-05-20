@@ -34,7 +34,7 @@ export default function PWConfirm() {
 
         const dataStr = JSON.stringify(data)
 
-        axios.post('http://localhost:8000/auth/users/reset_password_confirm/', dataStr, headers)
+        axios.post('http://localhost:8000/auth/users/Confirm_password_confirm/', dataStr, headers)
             .then((response) => {
                 response.json()
             })
@@ -67,6 +67,7 @@ export default function PWConfirm() {
                             type='password'
                             placeholder='New Password'
                             minLength='8'
+                            className='PWConfirm--form--input'
                             value={npw}
                             onChange={(e) => {setNpw(e.target.value)}}
                             required 
@@ -76,12 +77,13 @@ export default function PWConfirm() {
                             name='password'
                             type='password'
                             placeholder='Confirm New Password'
+                            className='PWConfirm--form--input'
                             minLength='8'
                             value={rnpw}
                             onChange={(e) => {setRnpw(e.target.value)}}
                             required 
                         />
-                        <button type='submit'>Reset</button>
+                        <button type='submit' className='PWConfirm--form--btn'>Confirm</button>
                     </form>
                 </div>
             </div>
