@@ -71,3 +71,8 @@
     height: 600px;
     width: 80%;
 }
+
+.home--content2--chart > * {
+    height: 100%;
+    width: 100%;
+}

@@ -5,13 +5,13 @@ import { Line } from 'react-chartjs-2'
 
 
 export default function ChartHome(props) {
-    
+
     const data = {
         labels: [],
         datasets: [
             {
                 label: props.chartData[0][0].symbol,
-                data: props.chartData[0][0].close,
+                data: props.chartData[0][0].Close,
                 fill: false,
                 borderWidth: 1,
                 borderColor: '#eb821aef',
@@ -20,7 +20,7 @@ export default function ChartHome(props) {
             },
             {
                 label: props.chartData[1][0].symbol,
-                data: props.chartData[1][0].close,
+                data: props.chartData[1][0].Close,
                 fill: false,
                 borderWidth: 1,
                 borderColor: '#eb821aef',
@@ -29,7 +29,7 @@ export default function ChartHome(props) {
             },
             {
                 label: props.chartData[2][0].symbol,
-                data: props.chartData[2][0].close,
+                data: props.chartData[2][0].Close,
                 fill: false,
                 borderWidth: 1,
                 borderColor: '#eb821aef',
@@ -38,7 +38,7 @@ export default function ChartHome(props) {
             },
             {
                 label: props.chartData[3][0].symbol,
-                data: props.chartData[3][0].close,
+                data: props.chartData[3][0].Close,
                 fill: false,
                 borderWidth: 1,
                 borderColor: '#eb821aef',
@@ -47,7 +47,7 @@ export default function ChartHome(props) {
             },
             {
                 label: props.chartData[4][0].symbol,
-                data: props.chartData[4][0].close,
+                data: props.chartData[4][0].Close,
                 fill: false,
                 borderWidth: 1,
                 borderColor: '#eb821aef',
@@ -59,7 +59,7 @@ export default function ChartHome(props) {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         scales: {
             y: {
                 grid: {
@@ -69,7 +69,7 @@ export default function ChartHome(props) {
                 }, 
                 ticks: {
                     font: {
-                        size: 10,
+                        size: 20,
                       },
                       color: '#cccccc',
                 }
@@ -82,7 +82,7 @@ export default function ChartHome(props) {
                 }, 
                 ticks: {
                     font: {
-                        size: 10,
+                        size: 20,
                       },
                       color: '#cccccc',
                 }
@@ -90,19 +90,19 @@ export default function ChartHome(props) {
         }
     }
 
-    // const generateDatesInRange = (startDate, dataLength) => {
-    //     const dates = [];
-    //     const currentDate = new Date();
+    const generateDatesInRange = (startDate, dataLength) => {
+        const dates = [];
+        const currentDate = new Date();
     
-    //     for (let i = dataLength - 1; i >= 0; i--) {
-    //       dates.push(currentDate.toDateString())
-    //       currentDate.setDate(currentDate.getDate() - 1);
-    //     }
+        for (let i = dataLength - 1; i >= 0; i--) {
+          dates.push(currentDate.toDateString())
+          currentDate.setDate(currentDate.getDate() - 1);
+        }
     
-    //     return dates;
-    //   }
+        return dates;
+      }
 
-    //   data.labels = generateDatesInRange(new Date(), data.datasets[0].data.length).reverse()
+      data.labels = generateDatesInRange(new Date(), data.datasets[0].data.length).reverse()
 
 
     return ( 
