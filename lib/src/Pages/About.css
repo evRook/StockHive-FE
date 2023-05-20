@@ -1,14 +1,25 @@
 .about--container {
     display: flex;
+    justify-content: center;
+    align-items: center;
     min-height: 800px;
     padding: 100px 100px 100px 100px;
-    background-image: linear-gradient(-215deg, #36363c, #31313a, #000109);
-    
+}
+
+.about--content__container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url('./Components/img/drmakete-lab-hsg538WrP0Y-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .about--content {
     height: 600px;
-    width: 800px;
+    width: 900px;
     padding: 100px;
     display: flex;
     flex-direction: column;
@@ -16,7 +27,7 @@
     align-items: start;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    background-image: linear-gradient(215deg, #36363c, #282839, #000109);
+    background-image: linear-gradient(270deg, #36363c38, #36363c, #2c2c38, #00031a, #000109);
 }
 
 .about--title__container {
@@ -33,15 +44,7 @@
 .about--img__container {
     width: 100%;
     min-height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('./Components/img/drmakete-lab-hsg538WrP0Y-unsplash.jpg');
-    background-position: center;
-    background-size: cover;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    box-shadow: inset 0px 0px 30px 30px #282839;
+    background-image: linear-gradient(270deg, #36363c00, #36363c38);
 }
 
 .about--text__container {
