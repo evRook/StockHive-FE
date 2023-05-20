@@ -52,9 +52,10 @@
 
 .signup--title {
     color: #fe9320;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     margin-right: 100px;
+    font-family: 'Unbounded', cursive;
 }
 
 .signup--form__container {
