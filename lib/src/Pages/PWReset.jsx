@@ -59,11 +59,12 @@ export default function PWReset() {
                             name='email'
                             type='email'
                             placeholder='Email'
+                            className='PWReset--form--input'
                             value={email}
                             onChange={(e) => {setEmail(e.target.value)}}
                             required 
                         />
-                        <button type='submit'>Send</button>
+                        <button type='submit' className='PWReset--form--btn'>Send</button>
                     </form>
                 </div>
             </div>
