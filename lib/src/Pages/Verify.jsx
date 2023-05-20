@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Verify.css'
 import { useNavigate, useParams } from "react-router-dom";
-import { WireBtn } from './Components'
+import { SolidBtn } from './Components'
 import axios from 'axios'
 import Cookies from 'js-cookie';
 
@@ -45,14 +45,22 @@ export default function Verify() {
 
     return ( 
         <div className="verify--container">
-            <p className="verify--text">
-                Verify your account to start tracking trades!
-            </p>
-            <WireBtn 
-                title='Verify'
-                type='submit' 
-                onClick={handleSubmit}
-            />
+            <div className="verify--content">
+                <img src={require('./Components/img/logo.png')} alt="" className="signup--logo" />
+                <div className="verify--text__container">
+                    <p className="verify--title">
+                        Welcome to StockHive!
+                    </p>
+                    <p className="verify--text">
+                        Verify your account to start tracking trades!
+                    </p>
+                    <SolidBtn 
+                        title='Verify'
+                        type='submit' 
+                        onClick={handleSubmit}
+                    />
+                </div>   
+            </div>
         </div>
      );
 }

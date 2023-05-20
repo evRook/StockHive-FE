@@ -1,13 +1,27 @@
 .signup--container {
-    height: 800px;  
+    height: 800px;
+    padding: 100px 100px 100px 100px;  
     display: flex; 
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup--sub__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 20px;
+    background-image: url('./Components/img/wallhaven-d5rqqo.png');
+    background-size: cover;
+    background-position: top;
 }
 
 .signup--img__container {
-    border: 2px solid grey;
-    width: 100%;
-    background-color: orange;
+    height: 100%;
+    width: 60%;
+    background-image: linear-gradient(to left, #FFFFFF00, #36363cd1, #34343b);
 }
 
 .signup--title__container {
@@ -15,19 +29,41 @@
 }
 
 .signup--content__container {
-    border: 2px solid grey;
+    width: 520px;
+    height: 656px;
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    border-radius: 20px;
+    background-image: linear-gradient(220deg, #36363cd3, #36363cea, #34343b);
+}
+
+.signup--title__container {
+    display: flex;
+    align-items: end;
+}
+
+.signup--logo {
+    height: 100px;
+    width: 100px;
+}
+
+.signup--title {
+    color: #fe9320;
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 100px;
 }
 
 .signup--form__container {
-    width: 600px;
     padding: 20px 100px;
+    color: #fe9320;
 }
 
 .signup--form {
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,11 +74,28 @@
     margin-bottom: 10px;
 }
 
-.signup--link__container {
+.signup--form--input {
+    padding: 5px;
+    border: 2px solid #fe9320;
+    border-radius: 20px;
+}
+
+.signup--form--btn {
+    width: 100px;
+    height: 25px;
+    background-color: #fe9320;
+    border: none;
+    border-radius: 20px;
+}
+
+.signup--link__container{
     padding: 0 100px;
 }
 
-.signup--link {
-    text-decoration: none;
-    cursor: pointer;
+.signup--link__container > p {
+    color: #fe9320;
+}
+
+.header--link {
+    color: #feeddb;
 }
