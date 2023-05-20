@@ -9,6 +9,9 @@ export default function Layout() {
   return (
     <div className="layout--container">
         <Header />
+        <div className="layout--border">
+          
+        </div>
         <div className="layout--content">
             <Outlet />
         </div>

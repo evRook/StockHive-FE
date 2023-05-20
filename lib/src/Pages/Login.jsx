@@ -66,49 +66,51 @@ export default function Login() {
 
     return ( 
         <div className="login--container">
-            <div className="login--img__container">
+            <div className="login--sub__container">
+                <div className="login--img__container">
 
-            </div>
-            <div className="login--content__container">
-                <div className="login--title__container">
-                    <p className="login--title">Log In</p>
                 </div>
-                <div className="login--form__container">
-                    <form 
-                        className='login--form' 
-                        onSubmit = {handleSubmit}
-                    >
-                        <label>Email:</label>
-                        <input 
-                            name='email'
-                            type='email'
-                            placeholder='Email'
-                            value={email}
-                            onChange={(e) => {setEmail(e.target.value)}}
-                            required
-                        />
-                        <label>Password:</label>
-                        <input 
-                            name='password'
-                            type='password'
-                            placeholder='Password'
-                            minLength='8'
-                            value={password}
-                            onChange={(e) => {setPassword(e.target.value)}}
-                            required 
-                        />
-                        <button type='submit'>Log In</button>
-                    </form>
-                </div>
-                <div className="signup--link__container">
-                    <p>Not a Member?</p>
-                    <Link to="/signup" className='header--link'>
-                        <p>Create Account</p>
-                    </Link>
-                    <p>Forgot your Password?</p>
-                    <Link to="/reset_password" className='header--link'>
-                        <p>Reset Password</p>
-                    </Link>
+                <div className="login--content__container">
+                    <div className="login--title__container">
+                        <p className="login--title">Log In</p>
+                    </div>
+                    <div className="login--form__container">
+                        <form 
+                            className='login--form' 
+                            onSubmit = {handleSubmit}
+                        >
+                            <label>Email:</label>
+                            <input 
+                                name='email'
+                                type='email'
+                                placeholder='Email'
+                                value={email}
+                                onChange={(e) => {setEmail(e.target.value)}}
+                                required
+                            />
+                            <label>Password:</label>
+                            <input 
+                                name='password'
+                                type='password'
+                                placeholder='Password'
+                                minLength='8'
+                                value={password}
+                                onChange={(e) => {setPassword(e.target.value)}}
+                                required 
+                            />
+                            <button type='submit'>Log In</button>
+                        </form>
+                    </div>
+                    <div className="signup--link__container">
+                        <p>Not a Member?</p>
+                        <Link to="/signup" className='header--link'>
+                            <p>Create Account</p>
+                        </Link>
+                        <p>Forgot your Password?</p>
+                        <Link to="/reset_password" className='header--link'>
+                            <p>Reset Password</p>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

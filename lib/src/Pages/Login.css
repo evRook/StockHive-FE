@@ -1,12 +1,25 @@
 .login--container {
-    height: 800px;  
+    height: 800px;
+    padding: 100px 100px 100px 100px;  
     display: flex; 
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.login--sub__container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border: 2px solid grey;
 }
 
 .login--img__container {
     border: 2px solid grey;
-    width: 100%;
+    width: 700px;
+    height: 100%;
+    background-image: url('./Components/img/drmakete-lab-hsg538WrP0Y-unsplash.jpg');
     background-color: orange;
 }
 
@@ -16,6 +29,8 @@
 
 .login--content__container {
     border: 2px solid grey;
+    width: 500px;
+    height: 556px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +38,7 @@
 }
 
 .login--form__container {
-    width: 600px;
+
     padding: 20px 100px;
 }
 

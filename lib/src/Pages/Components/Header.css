@@ -1,8 +1,14 @@
 .header--container {
-    height: 130px;
+    height: 160px;
     display: flex;
+    padding-bottom: 20px;
     justify-content: space-between;
     align-items: end;
+    background-color: #FFFFFF;
+    background-image: url('./img/Hex.jpeg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header--logo__link {

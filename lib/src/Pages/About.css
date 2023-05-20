@@ -42,7 +42,7 @@
     background-size: cover;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
-    box-shadow: inset 0px 0px 30px 30px;
+    box-shadow: inset 0px 0px 30px 30px #282839;
 }
 
 .about--text__container {
