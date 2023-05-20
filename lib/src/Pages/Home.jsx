@@ -13,7 +13,7 @@ export default function Home(props) {
     return ( 
         <div className="home--container">
             <div className="home--ticker__container">
-                <Ticker data={companyData}/>
+                {/* <Ticker data={companyData}/> */}
             </div>
             <div className="home--header__container">  
                 <div className="home--header--content">
@@ -37,7 +37,7 @@ export default function Home(props) {
                     </Link>
                 </div>
                 <div className="home--content--2">
-                    
+
                 </div>
             </div>
         </div>

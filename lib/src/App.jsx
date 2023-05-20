@@ -22,13 +22,14 @@ import {
 
 import{
   companyLoader,
-  tickerLoader
+  tickerLoader,
+  chartLoader
 } from './loaders'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<Layout />}>
-      <Route index element={<Home />} loader={tickerLoader}/>
+      <Route index element={<Home />} loader={chartLoader}/>
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<SignUp />} />
