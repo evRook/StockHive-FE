@@ -12,15 +12,16 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    border: 2px solid grey;
+    border-radius: 20px;
+    background-image: url('./Components/img/wallhaven-d5rqqo.png');
+    background-size: cover;
+    background-position: top;
 }
 
 .login--img__container {
-    border: 2px solid grey;
-    width: 700px;
     height: 100%;
-    background-image: url('./Components/img/drmakete-lab-hsg538WrP0Y-unsplash.jpg');
-    background-color: orange;
+    width: 60%;
+    background-image: linear-gradient(to left, #FFFFFF00, #36363cd1, #34343b);
 }
 
 .login--title__container {
@@ -28,21 +29,41 @@
 }
 
 .login--content__container {
-    border: 2px solid grey;
     width: 500px;
     height: 556px;
+    margin-right: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    border-radius: 20px;
+    background-image: linear-gradient(220deg, #36363cd3, #36363cea, #34343b);
+}
+
+.login--title__container {
+    display: flex;
+    align-items: end;
+}
+
+.login--logo {
+    height: 100px;
+    width: 100px;
+}
+
+.login--title {
+    color: #fe9320;
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 100px;
 }
 
 .login--form__container {
-
     padding: 20px 100px;
+    color: #fe9320;
 }
 
 .login--form {
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,4 +72,26 @@
 
 .login--form > * {
     margin-bottom: 10px;
+}
+
+.login--form--input {
+    padding: 5px;
+    border: 2px solid #fe9320;
+    border-radius: 20px;
+}
+
+.login--form--btn {
+    width: 100px;
+    height: 25px;
+    background-color: #fe9320;
+    border: none;
+    border-radius: 20px;
+}
+
+.signup--link__container > p {
+    color: #fe9320;
+}
+
+.header--link {
+    color: #feeddb;
 }

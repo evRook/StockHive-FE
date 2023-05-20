@@ -68,11 +68,11 @@ export default function Login() {
         <div className="login--container">
             <div className="login--sub__container">
                 <div className="login--img__container">
-
                 </div>
                 <div className="login--content__container">
                     <div className="login--title__container">
                         <p className="login--title">Log In</p>
+                        <img src={require('./Components/img/logo.png')} alt="" className="login--logo" />
                     </div>
                     <div className="login--form__container">
                         <form 
@@ -84,6 +84,7 @@ export default function Login() {
                                 name='email'
                                 type='email'
                                 placeholder='Email'
+                                className='login--form--input'
                                 value={email}
                                 onChange={(e) => {setEmail(e.target.value)}}
                                 required
@@ -93,12 +94,13 @@ export default function Login() {
                                 name='password'
                                 type='password'
                                 placeholder='Password'
+                                className='login--form--input'
                                 minLength='8'
                                 value={password}
                                 onChange={(e) => {setPassword(e.target.value)}}
                                 required 
                             />
-                            <button type='submit'>Log In</button>
+                            <button type='submit' className='login--form--btn'>Log In</button>
                         </form>
                     </div>
                     <div className="signup--link__container">
