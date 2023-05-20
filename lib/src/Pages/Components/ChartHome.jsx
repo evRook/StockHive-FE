@@ -14,36 +14,36 @@ export default function ChartHome(props) {
                 data: props.chartData[0][0].Close,
                 fill: false,
                 borderWidth: 1,
-                borderColor: '#eb821aef',
-                backgroundColor: '#00000000',
-                fontColor: '#cccccc',
+                borderColor: '#FFFFFFef',
+                backgroundColor: '#FFFFFF50',
+                fontColor: '#feeddb',
             },
             {
                 label: props.chartData[1][0].symbol,
                 data: props.chartData[1][0].Close,
                 fill: false,
                 borderWidth: 1,
-                borderColor: '#eb821aef',
-                backgroundColor: '#00000000',
-                fontColor: '#cccccc',
+                borderColor: '#3e903cef',
+                backgroundColor: '#3e903c50',
+                fontColor: '#feeddb',
             },
             {
                 label: props.chartData[2][0].symbol,
                 data: props.chartData[2][0].Close,
                 fill: false,
                 borderWidth: 1,
-                borderColor: '#eb821aef',
-                backgroundColor: '#00000000',
-                fontColor: '#cccccc',
+                borderColor: '#b34848ef',
+                backgroundColor: '#b3484850',
+                fontColor: '#feeddb',
             },
             {
                 label: props.chartData[3][0].symbol,
                 data: props.chartData[3][0].Close,
                 fill: false,
                 borderWidth: 1,
-                borderColor: '#eb821aef',
-                backgroundColor: '#00000000',
-                fontColor: '#cccccc',
+                borderColor: '#686df9ef',
+                backgroundColor: '#686df950',
+                fontColor: '#feeddb',
             },
             {
                 label: props.chartData[4][0].symbol,
@@ -51,8 +51,8 @@ export default function ChartHome(props) {
                 fill: false,
                 borderWidth: 1,
                 borderColor: '#eb821aef',
-                backgroundColor: '#00000000',
-                fontColor: '#cccccc',
+                backgroundColor: '#eb821a50',
+                fontColor: '#feeddb',
             },
         ]
     }
@@ -64,27 +64,27 @@ export default function ChartHome(props) {
             y: {
                 grid: {
                     display: true,
-                    color: '#cccccc10',
+                    color: '#feeddb10',
                     lineWidth: 1,
                 }, 
                 ticks: {
                     font: {
                         size: 20,
                       },
-                      color: '#cccccc',
+                      color: '#feeddb',
                 }
             },
             x: {
                 grid: {
                     display: true,
-                    color: '#cccccc10',
+                    color: '#feeddb10',
                     lineWidth: 1,
                 }, 
                 ticks: {
                     font: {
-                        size: 20,
+                        size: 15,
                       },
-                      color: '#cccccc',
+                      color: '#feeddb',
                 }
             }
         }

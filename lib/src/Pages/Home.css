@@ -40,7 +40,7 @@
 
 .home--header--text {
     width: 100%;
-    color: #FFFFFF;
+    color: #feeddb;
     text-align: center;
 }   
 
@@ -60,19 +60,62 @@
 }
 
 .home--content2 {
+    padding: 40px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: #868686;
 }
 
 .home--content2--chart {
-    border: 2px solid grey;
+    padding: 15px 25px ;
     height: 600px;
     width: 80%;
+    border-radius: 20px;
+    background-image: linear-gradient(-215deg, #48484f, #202026, #000109);
+    box-shadow: 3px 3px 6px 3px #5a5a5a;
 }
 
 .home--content2--chart > * {
     height: 100%;
     width: 100%;
+}
+
+.home--content3 {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #feeddb;
+}
+
+.home--content3 > * {
+    text-align: center;
+}
+
+.home--content4 {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('./Components/img/abstractBackground.jpg');
+    background-position: top;
+}
+
+.home--content4--img {
+    height: 100%;
+    width: 60%;
+    display: flex;
+    align-items: end;
+}
+
+.home--content4--img > * {
+    height: 700px;
+}
+
+.home--content4--text {
+    height: 100%;
+    width: 40%;
+    background-image: linear-gradient( 120deg, #e8e8e800, #f6f5f54b, #fd8505);
 }

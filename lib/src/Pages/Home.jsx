@@ -39,6 +39,19 @@ export default function Home(props) {
                 <div className="home--content2">
                     <div className="home--content2--chart">
                         <ChartHome chartData={companyData} />
+                    </div> 
+                </div>
+                <div className="home--content3">
+                    <div className="home--content3--text">
+                        <p>investors can easily track and analyze the growth of their portfolios, empowering them to make informed investment decisions and maximize their financial returns.</p>
+                    </div>
+                </div>
+                <div className="home--content4">
+                    <div className="home--content4--img">
+                        <img src={require('./Components/img/hans-eiskonen-wn57cSQ7VzI-unsplash.png')} alt="" />
+                    </div>
+                    <div className="home--content4--text">
+                        <p></p>
                     </div>
                 </div>
             </div>
