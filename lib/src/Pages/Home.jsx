@@ -50,8 +50,13 @@ export default function Home(props) {
                     <div className="home--content4--img">
                         <img src={require('./Components/img/hans-eiskonen-wn57cSQ7VzI-unsplash.png')} alt="" />
                     </div>
-                    <div className="home--content4--text">
-                        <p></p>
+                    <div className="home--content4--text__container">
+                        <div className="home--content4--content">
+                            <p className="home--content4--text">Join The Hive</p>
+                            <Link to="/signup" className='header--link'>
+                                <SolidBtn title='Sign Up' />
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
