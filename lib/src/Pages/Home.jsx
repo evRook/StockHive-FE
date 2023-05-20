@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { WireBtn, SolidBtn, NavBtn, Ticker, SearchBar } from './Components'
+import { WireBtn, SolidBtn, NavBtn, Ticker, SearchBar, ChartHome } from './Components'
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
 
@@ -28,7 +28,7 @@ export default function Home(props) {
             </div>
             
             <div className="home--content__container">
-                <div className="home--content--1">
+                <div className="home--content1">
                     <p className="home--header--text">
                         Your go-to source for monitoring your investments in the stock market. Our app provides real-time updates on stock prices and allows you to create a personalized watchlist of your favorite stocks, so you can stay informed and make informed decisions.
                     </p>
@@ -36,8 +36,10 @@ export default function Home(props) {
                         <WireBtn title='About' />
                     </Link>
                 </div>
-                <div className="home--content--2">
-
+                <div className="home--content2">
+                    <div className="home--content2--chart">
+                        <ChartHome chartData={companyData} />
+                    </div>
                 </div>
             </div>
         </div>
