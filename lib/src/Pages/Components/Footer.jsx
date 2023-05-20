@@ -24,10 +24,10 @@ export default function Footer() {
                 </div>
                 <div className="footer--btn__container">
                     <Link to="/login" className='header--link'>
-                        <WireBtn title='Log in' />
+                        <WireBtn title='Log in' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link>
                     <Link to="/signup" className='header--link'>
-                        <SolidBtn title='Sign up'/>
+                        <SolidBtn title='Sign up' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link>
                 </div>
             </div>
