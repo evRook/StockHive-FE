@@ -35,12 +35,14 @@
     margin-top: 20px;
     font-weight: 800;
     text-shadow: 2px 2px 10px #000000;
+    font-family: 'Unbounded', cursive;
 }
 
 .home--header--text {
     width: 100%;
     color: #feeddb;
     text-align: center;
+    font-family: 'Unbounded', cursive;
 }   
 
 .home--ticker__container {
@@ -91,6 +93,7 @@
 
 .home--content3 > * {
     text-align: center;
+    font-family: 'Unbounded', cursive;
 }
 
 .home--content4 {
@@ -133,13 +136,13 @@
     flex-direction: column;
     justify-content: center;
     background-image: linear-gradient( 120deg, #e8e8e800, #f6f5f54b, #fd8505);
-
 }
 
 .home--content4--text {
     margin: 0;
     margin-bottom: 5px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     text-shadow: 2px 2px 10px #FFFFFF;
+    font-family: 'Unbounded', cursive;
 }
