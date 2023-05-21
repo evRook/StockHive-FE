@@ -103,6 +103,11 @@ export default function DashBoard() {
                     <RadarComp audit={company[0].auditRisk} board={company[0].boardRisk} compensation={company[0].compensationRisk} sh={company[0].shareHolderRightsRisk}/>
                 </div>
             </div>
+            <div className="db--content__container2">
+                <div className="db--misc__container">
+                    
+                </div>
+            </div>
             <div className="db--text__container">
                     <p className="db--text">
                         {company[0].longBusinessSummary}

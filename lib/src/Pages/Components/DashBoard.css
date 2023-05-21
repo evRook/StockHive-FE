@@ -35,8 +35,15 @@
 }
 
 .db--title--ticker {
-    font-size: 12px;
     margin-bottom: 17px;
+    margin-right: 55px;
+    font-size: 12px;
+    
+}
+
+.db--title--current {
+    margin-bottom: 15px;
+    font-size: 25px;
 }
 
 .db--content__container {
@@ -160,4 +167,11 @@
     align-items: center;
     border-radius: 10px;
     background-image: linear-gradient(215deg, #36363c, #282837, #000109);
+}
+
+.db--content__container2 {
+    border: 2px solid grey;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 100%;
 }
