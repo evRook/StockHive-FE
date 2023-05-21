@@ -5,7 +5,7 @@ import { Radar } from 'react-chartjs-2'
 
 
 export default function RadarComp(props) {
-    console.log([props.audit, props.board, props.compensation, props.sh])
+    // console.log([props.audit, props.board, props.compensation, props.sh])
     
     const data = {
         labels: [

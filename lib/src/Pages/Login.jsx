@@ -4,23 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 import Cookies from 'js-cookie';
 
-export default function Login() {
+export default function Login({handleAuth}) {
     const navigate = useNavigate()
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [isAuth, setIsAuth] = useState(false)
 
     let user = JSON.parse(localStorage.getItem('user'))
 
-    
-    // useEffect(() => {
-    //     if(user.access !== null){
-    //         setIsAuth(true)
-    //     }
-    // }, [isAuth])
-
-    
     function handleSubmit(e){
         e.preventDefault()
 
@@ -40,27 +31,22 @@ export default function Login() {
 
         const dataStr = JSON.stringify(data)
 
+        window.localStorage.clear()
+
         axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
             .then((response) => {
-                localStorage.clear()
-                if(response.data.access){
+                if(response.status === 200){
                     localStorage.setItem('user', JSON.stringify(response.data))
                     alert('Logged In Successfully')
+                    navigate('/profile', { state: true })
                 }
-                // console.log(response)
+                
                 return response.data
             })
             .catch((error) => {
                 console.log(error)
+                alert('Login Failed')
             })
-        
-        // const user = JSON.parse(localStorage.getItem('user'))
-        // console.log(user)
-
-        console.log(isAuth)
-
-        navigate('/profile', {state: isAuth})
-
     }
 
 

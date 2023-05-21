@@ -1,17 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Layout.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { Header, Footer } from './Components'
 
 
 export default function Layout() {
-  
   return (
     <div className="layout--container">
         <Header />
-        <div className="layout--border">
-          
-        </div>
         <div className="layout--content">
             <Outlet />
         </div>

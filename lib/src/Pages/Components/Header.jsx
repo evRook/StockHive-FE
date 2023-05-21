@@ -5,11 +5,21 @@ import { Link, useLocation } from "react-router-dom";
 import { LogOut } from '../../Utils/LogOut'
 
 
-export default function Header() {
-    
+export default function Header(props) {
+    const location = useLocation()
+    const [isAuth, setIsAuth] = useState(location.state)
+    const [resetKey, setResetKey] = useState(0)
 
-    const state = useLocation()
-    const [isAuth, setIsAuth] = useState(state)
+    const logout = () => {
+        console.log('clicked')
+        window.localStorage.clear()
+        setIsAuth(false)
+        setResetKey((x)=> x+1)
+    }
+
+    useEffect(()=>{
+        console.log('refreshed')
+    }, [resetKey])
 
     return (
         <div className="header--container">
