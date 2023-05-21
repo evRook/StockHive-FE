@@ -21,6 +21,7 @@ export default function DashBoard() {
             overallRisk: 0,
         }
     ])
+    const [priceArrow, setPriceArrow] = useState()
 
     let chartComp = null
 
@@ -28,7 +29,7 @@ export default function DashBoard() {
         axios.get(`http://localhost:8000/history/${search}/${scope}`)
             .then((response) => {
                 setChart(response.data)
-                console.log(response.data)
+                // console.log(response.data)
             })
             .catch((error) => {
                 console.log(error)
@@ -37,11 +38,17 @@ export default function DashBoard() {
         axios.get(`http://localhost:8000/company/${search}`)
             .then((response) => {
                 setCompany(response.data)
-                console.log(response.data)
+                // console.log(response.data)
             })
             .catch((error) => {
                 console.log(error)
             })
+        
+        if(company[0].currentPrice > company[0].regularMarketPreviousClose){
+            setPriceArrow(<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/>)
+        }else{
+            setPriceArrow(<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/>)
+        }
 
     }, [])
 
@@ -54,6 +61,9 @@ export default function DashBoard() {
                     </p>
                     <p className="db--title--ticker">
                         ({company[0].symbol})
+                    </p>
+                    <p className="db--title--current">
+                        {company[0].currentPrice}{priceArrow}
                     </p>
                 </div>
                 <div className="db--header--search">
@@ -85,7 +95,7 @@ export default function DashBoard() {
                             <p className="db--yearstat--high">High<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/> {company[0].fiftyTwoWeekHigh.toFixed(2)}</p>
                         </div>
                         <div className="db--yearstat">
-                            <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/>   {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
+                            <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/> {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
                         </div>
                     </div>
                 </div>
