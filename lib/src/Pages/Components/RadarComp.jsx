@@ -9,14 +9,15 @@ export default function RadarComp(props) {
     
     const data = {
         labels: [
+            'Share Holder Rights',
             'Audit',
             'Compensation',
             'Board',
-            'Share Holder'
+            
         ],
         datasets: [{
             label: 'Risk',
-            data: [props.audit, props.compensation, props.board, props.sh],
+            data: [props.sh, props.audit, props.compensation, props.board],
             fill: true,
             backgroundColor: '#eb821a20',
             borderColor: '#eb821aef',
