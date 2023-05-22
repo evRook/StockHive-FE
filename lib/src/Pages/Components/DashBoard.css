@@ -55,8 +55,8 @@
 }
 
 .db--text__container {
-    width: 95.7%;
-    margin: 0px 10px 0px 10px;
+    width: 96.5%;
+    margin: 0px 0px 0px 0px;
     padding: 10px 25px;
     font-size: 12px;
     border-radius: 10px;
@@ -235,6 +235,7 @@
 
 .db--radar--title > * {
     margin: 0;
+    margin-bottom: 15px;
     font-size: 20px;
     color: #fe9320;
 }

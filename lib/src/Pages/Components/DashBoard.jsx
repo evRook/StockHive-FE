@@ -110,6 +110,15 @@ export default function DashBoard() {
                     <hr className='db--companyInfo--hr'/>
                     <div className="bd--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
+                            52 Week Range:
+                        </p>
+                        <p className="db--companyInfo--text">
+                        {company[0].fiftyTwoWeekHigh.toFixed(2)} - {company[0].fiftyTwoWeekHigh.toFixed(2)}
+                        </p>
+                    </div>
+                    <hr className='db--companyInfo--hr'/>
+                    <div className="bd--companyInfo__subContainer">
+                        <p className="db--companyInfo--title">
                             Volume:
                         </p>
                         <p className="db--companyInfo--text">
@@ -150,15 +159,6 @@ export default function DashBoard() {
                         </p>
                         <p className="db--companyInfo--text">
                             {company[0].targetMeanPrice}
-                        </p>
-                    </div>
-                    <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
-                        <p className="db--companyInfo--title">
-                            Forward Dividend(Yield):
-                        </p>
-                        <p className="db--companyInfo--text">
-                            {company[0].dividendRate}({company[0].dividendYield}%)
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
@@ -216,23 +216,10 @@ export default function DashBoard() {
                 </div>
             </div>
             <div className="db--info__container">
-                <div className="db--info--content">
-                </div>
                 <div className="db--text__container">
-                        <p className="db--text">
-                            {company[0].longBusinessSummary}
-                        </p>
-                </div>
-                <div className="db--yearstat__container">
-                    <div className="db--yearstat--txt">
-                        <p className="db--yearstat--title">52 Week</p>
-                    </div>
-                    <div className="db--yearstat">
-                        <p className="db--yearstat--high">High<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/> {company[0].fiftyTwoWeekHigh.toFixed(2)}</p>
-                    </div>
-                    <div className="db--yearstat">
-                        <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/> {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
-                    </div>
+                    <p className="db--text">
+                        {company[0].longBusinessSummary}
+                    </p>
                 </div>
             </div>
         </div>
