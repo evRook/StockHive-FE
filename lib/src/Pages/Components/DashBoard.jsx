@@ -177,47 +177,46 @@ export default function DashBoard() {
                     </div>
                 </div>
                 <div className="db--center__container">
-                    <div className="db--center__subContainer">
-                        <div className="db--doghnut__container"  id='doughnut1'>
-                            <DoughnutComp risk={company[0].overallRisk} limit={10}/>
-                            <div className="db--doghnut--overlay">
-                                <p className="db--doghnut--title">Overall Risk</p>
-                                <div className="db--doughnut--rank">
-                                    <p>0</p>
-                                    <p>10</p>
-                                </div>
+                    <div className="db--doghnut__container"  id='doughnut1'>
+                        <DoughnutComp risk={company[0].overallRisk} limit={10}/>
+                        <div className="db--doghnut--overlay">
+                            <p className="db--doghnut--title">Overall Risk</p>
+                            <div className="db--doughnut--rank">
+                                <p>0</p>
+                                <p>10</p>
                             </div>
                         </div>
-                       
                     </div>
-                    <div className="db--center__subContainer">
-                        <div className="db--doghnut__container" id='doughnut2'>
-                            <DoughnutComp risk={company[0].recommendationMean} limit={5}/>
-                            <div className="db--doghnut--overlay">
-                                <p className="db--doghnut--title2">Analyst Recommendation</p>
-                                <div className="db--doughnut--key">
-                                    <p>{company[0].recommendationKey}</p>
-                                </div>
-                                <div className="db--doughnut--rank">
-                                    <p>1</p>
-                                    <p>5</p>
-                                </div>
+                    <div className="db--doghnut__container" id='doughnut2'>
+                        <DoughnutComp risk={company[0].recommendationMean} limit={5}/>
+                        <div className="db--doghnut--overlay">
+                            <p className="db--doghnut--title2">Analyst Recommendation</p>
+                            <div className="db--doughnut--key">
+                                <p>{company[0].recommendationKey}</p>
+                            </div>
+                            <div className="db--doughnut--rank">
+                                <p>1</p>
+                                <p>5</p>
                             </div>
                         </div>
-                        <div className="db--yearstat__container">
-                            <RadarComp 
-                                audit={company[0].auditRisk}
-                                compensation={company[0].compensationRisk}
-                                board={company[0].boardRisk}
-                                sh={company[0].shareHolderRightsRisk}
-                            />
-                        </div>
+                    </div>
+                </div>
+                <div className="db--radar__container">
+                    <div className="db--radar--title">
+                        <p>Investor Risks</p>
+                    </div>
+                    <div className="db--radar">
+                        <RadarComp 
+                            audit={company[0].auditRisk}
+                            compensation={company[0].compensationRisk}
+                            board={company[0].boardRisk}
+                            sh={company[0].shareHolderRightsRisk}
+                        />
                     </div>
                 </div>
             </div>
             <div className="db--info__container">
                 <div className="db--info--content">
-                    div
                 </div>
                 <div className="db--text__container">
                         <p className="db--text">

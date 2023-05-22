@@ -1,5 +1,5 @@
 .db--container {
-    width: 1200px;
+    width: 1400px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -221,14 +221,29 @@
 }
 
 .db--radar__container {
-    width: 100%;
+    width: 340px;
+    height: 300px;
     padding: 10px 10px 58px 10px;
     margin-left: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
     border-radius: 10px;
     background-image: linear-gradient(215deg, #36363c, #282837, #000109);
+}
+
+.db--radar--title > * {
+    margin: 0;
+    font-size: 20px;
+    color: #fe9320;
+}
+
+.db--radar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .db--content__container2 {
