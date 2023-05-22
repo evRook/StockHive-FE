@@ -38,7 +38,7 @@ export default function Login({handleAuth}) {
                 if(response.status === 200){
                     localStorage.setItem('user', JSON.stringify(response.data))
                     alert('Logged In Successfully')
-                    navigate('/profile', { state: true })
+                    navigate('/profile')
                 }
                 
                 return response.data

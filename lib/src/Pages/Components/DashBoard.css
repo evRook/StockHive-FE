@@ -44,6 +44,7 @@
 .db--title--current {
     margin-bottom: 15px;
     font-size: 25px;
+    color: #feeddb;
 }
 
 .db--content__container {
@@ -60,7 +61,39 @@
     font-size: 12px;
     border-radius: 10px;
     background-image: linear-gradient(215deg, #36363c, #31313a, #000109);
-    color: #e3e3e3;
+    color: #feeddb;
+}
+
+.db--companyInfo__container {
+    margin-right: 10px;
+    padding: 10px;
+    width: 190px;
+    height: 350px;
+    border-radius: 10px;
+    background-image: linear-gradient(255deg, #36363c, #202026, #070a23);
+}
+
+.bd--companyInfo__subContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.db--companyInfo--title {
+    margin: 0;
+    color: #fe9320;
+    font-size: 13px;
+}
+
+.db--companyInfo--text {
+    margin: 0;
+    color: #feeddb;
+    font-size: 11px;
+    text-align: end;
+}
+
+.db--companyInfo--hr {
+    border: 1px solid #3d3d3d87;
 }
 
 .db--chart__container{
@@ -92,15 +125,28 @@
     align-items: center;
 }
 
+.db--center__subContainer {
+    display: flex;
+}
+
 .db--doghnut__container {
     position: relative;
     width: 160px;
     height: 160px;
     padding: 10px;
     margin-bottom: 10px;
+    margin-right: 10px;
     border-radius: 10px;
     background-image: linear-gradient(215deg, #36363c, #282837, #000109);
     color: #fe9320;
+}
+
+#doughnut2 {
+    margin: 0;
+}
+
+#doughnut3 {
+    margin-left: 10px;
 }
 
 .db--doghnut--overlay {
@@ -124,12 +170,36 @@
     color: #fe9320;
 }
 
+.db--doghnut--title2 {
+    margin: 0;
+    font-size: 20px;
+}
+
 .db--doughnut--rank {
     width: 90%;
     display: flex;
     justify-content: space-around;
-    color: #fe9320;
+    color: #feeddb;
 }
+
+.db--doughnut--rank > * {
+    margin: 0;
+    margin-bottom: 20px
+}
+
+.db--doughnut--key {
+    width: 90%;
+    color: #feeddb;
+    display: flex;
+    justify-content: center;
+}
+
+.db--doughnut--key > * {
+    margin: 0;
+    margin-top: 35px;
+}
+
+
 
 .db--yearstat__container {
     width: 160px;
@@ -142,9 +212,9 @@
 }
 
 .db--yearstat--title {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .db--yearstat {
@@ -155,7 +225,7 @@
 .db--yearstat > * {
     margin: 0;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .db--radar__container {

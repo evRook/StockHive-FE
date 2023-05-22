@@ -4,13 +4,11 @@ import Chart from 'chart.js/auto';
 import { Doughnut } from 'react-chartjs-2'
 
 export default function DoughnutComp(props) {
-    const [riskColor, setRiskColor] = useState(['#00000000', '#00000000'])
-
     const data = {
         labels: ['Overall Risk'],
         datasets: [
           {
-            data: [props.risk, 4],
+            data: [props.risk, props.limit - props.risk],
             backgroundColor: ['#fe9320', '#00000000'],
           },
         ],
@@ -31,7 +29,7 @@ export default function DoughnutComp(props) {
         maintainAspectRatio: false,
         responsive: true,
         borderRadius: 50,
-        borderColor: '#c05300'
+        borderColor: '#c0530030'
       }
 
 
