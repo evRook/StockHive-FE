@@ -6,8 +6,8 @@ import { useLocation } from "react-router-dom";
 import { ChartComp, DoughnutComp, SearchBar, RadarComp } from './index'
 
 export default function DashBoard() {
-    const { state } = useLocation()
-    const { search, scope } = state || { search: 'aapl', scope: '1mo'}
+    const { data } = useLocation()
+    const { search, scope } = data || { search: 'aapl', scope: '1mo'}
     const [chart, setChart] = useState([
         {   
             symbol: 'Null',

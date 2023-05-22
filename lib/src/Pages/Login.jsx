@@ -31,14 +31,14 @@ export default function Login({handleAuth}) {
 
         const dataStr = JSON.stringify(data)
 
-        window.localStorage.clear()
+        window.localStorage.removeItem('user')
 
         axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
             .then((response) => {
                 if(response.status === 200){
                     localStorage.setItem('user', JSON.stringify(response.data))
                     alert('Logged In Successfully')
-                    navigate('/profile')
+                    navigate('/profile', { state: { auth: true }})
                 }
                 
                 return response.data

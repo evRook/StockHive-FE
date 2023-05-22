@@ -2,24 +2,30 @@ import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { WireBtn, SolidBtn, NavBtn, SearchBar } from './index'
 import { Link, useLocation } from "react-router-dom";
-import { LogOut } from '../../Utils/LogOut'
 
 
 export default function Header(props) {
-    // const location = useLocation()
-    const [isAuth, setIsAuth] = useState(true)
+    const state = useLocation()
+    const { auth } = state
+    const [isAuth, setIsAuth] = useState(false)
     const [resetKey, setResetKey] = useState(0)
 
     const logout = () => {
         console.log('clicked')
-        window.localStorage.clear()
+        console.log(window.localStorage)
+        window.localStorage.removeItem('user')
         setIsAuth(false)
         setResetKey((x)=> x+1)
     }
 
     useEffect(()=>{
-        console.log('refreshed')
+        console.log('header refreshed')
     }, [resetKey])
+
+    useEffect(()=>{
+        console.log('auth refreshed')
+        setIsAuth(auth)
+    }, [auth])
 
     return (
         <div className="header--container">
@@ -46,26 +52,28 @@ export default function Header(props) {
                         : null }
                     </div>
                     <div className="header--search__container">
-                        <SearchBar />
+                        {isAuth ? 
+                           <SearchBar />
+                        : null }
                     </div>
                 </div>
                 <div className="header--btn__container">
-                        {isAuth ? 
-                            null 
-                        :
-                            <Link to="/login" className='header--link'>
-                                <WireBtn title='Log in' />
-                            </Link>
-                        }
-                        {isAuth ? 
-                            <Link to="/about" className='header--link'>
-                                <SolidBtn title='Log Out' onClick={LogOut}/>
-                            </Link> 
-                        :
-                            <Link to="/signup" className='header--link'>
-                                <SolidBtn title='Sign up'/>
-                            </Link> 
-                        }
+                    {isAuth ? 
+                        null 
+                    :
+                        <Link to="/login" className='header--link'>
+                            <WireBtn title='Log in' />
+                        </Link>
+                    }
+                    {isAuth ? 
+                        <Link to="/" className='header--link'>
+                            <SolidBtn title='Log Out' onClick={logout}/>
+                        </Link> 
+                    :
+                        <Link to="/signup" className='header--link'>
+                            <SolidBtn title='Sign up'/>
+                        </Link> 
+                    }
                 </div>
         </div>
     );
