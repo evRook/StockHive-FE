@@ -5,6 +5,9 @@
     margin-top: 5px;
     margin-right: 5px;
     background-image: linear-gradient(260deg, #28282f, #1f1f2f, #000109);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .tickerCard--title {
@@ -14,5 +17,5 @@
 
 .tickerCard--text > * {
     margin: 0;
-    color: #fe9320;
+    color: #feeddb;
 }

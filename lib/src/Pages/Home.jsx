@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
+import axios from 'axios'
 import { WireBtn, SolidBtn, NavBtn, Ticker, SearchBar, ChartHome } from './Components'
 import { Link } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
@@ -8,13 +9,40 @@ import { useLoaderData } from "react-router-dom";
 
 export default function Home(props) {
     const companyData = useLoaderData();
-    console.log(companyData)
+    const [tickers, setTickers] = useState([])
+    const ticks = ['aapl', 'msft', 'tsla', 'meta', 'amzn' ]
+    let chartArr = []
+    let tickerArr = []
+
+    useEffect(() => {
+        axios.get(`http://localhost:8000/ticker`)
+        .then((response) => {
+            setTickers(response.data)
+            console.log(tickers)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }, [])
+
+    // useEffect(() => {
+    //     for(let i=0; i<ticks.length; i++){
+    //         axios.get(`http://localhost:8000/history/${ticks[i]}/1y`)
+    //         .then((response) => {
+    //             chartArr.push(response.data)
+    //         })
+    //         .catch((error) => {
+    //             console.log(error)
+    //         })
+    //     }
+    // }, [])
+    
+    // useEffect(() => {
+    //     console.log(chartArr)
+    // }, [chartArr])
 
     return ( 
         <div className="home--container">
-            <div className="home--ticker__container">
-                {/* <Ticker data={companyData}/> */}
-            </div>
             <div className="home--header__container">  
                 <div className="home--header--content">
                     <p className="home--header--title">
@@ -38,13 +66,16 @@ export default function Home(props) {
                 </div>
                 <div className="home--content2">
                     <div className="home--content2--chart">
-                        <ChartHome chartData={companyData} />
+                        <ChartHome chartData={chartArr} />
                     </div> 
                 </div>
                 <div className="home--content3">
                     <div className="home--content3--text">
                         <p>investors can easily track and analyze the growth of their portfolios, empowering them to make informed investment decisions and maximize their financial returns.</p>
                     </div>
+                </div>
+                <div className="home--ticker__container">
+                    <Ticker data={tickers}/>
                 </div>
                 <div className="home--content4">
                     <div className="home--content4--img">
