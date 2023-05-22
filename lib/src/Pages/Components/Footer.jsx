@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.css";
 import { WireBtn, SolidBtn, NavBtn } from './index'
 import { Link } from "react-router-dom";
+import { FaGithubSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -19,13 +20,26 @@ export default function Footer() {
                         <NavBtn title='Contact' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link> 
                 </div>
-                <div className="footer--btn__container">
-                    <Link to="/login" className='header--link'>
-                        <WireBtn title='Log in' onClick={()=>{window.scrollTo(0, 0)}}/>
-                    </Link>
-                    <Link to="/signup" className='header--link'>
-                        <SolidBtn title='Sign up' onClick={()=>{window.scrollTo(0, 0)}}/>
-                    </Link>
+                <div className="footer--lower__container">
+                    <div className="footer--btn__container">
+                        <Link to="/login" className='header--link'>
+                            <WireBtn title='Log in' onClick={()=>{window.scrollTo(0, 0)}}/>
+                        </Link>
+                        <Link to="/signup" className='header--link'>
+                            <SolidBtn title='Sign up' onClick={()=>{window.scrollTo(0, 0)}}/>
+                        </Link>
+                    </div>
+                    <div className="footer--social__container">
+                        <a href="https://github.com/evRook" className="footer--gh--link">
+                            <FaGithubSquare style={{ color: '#333355', fontSize: '30px'}}/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ericspychalski/" className="footer--li--link">
+                            <FaTwitterSquare style={{ color: '#333355', fontSize: '30px'}}/>
+                        </a>
+                        <a href="https://twitter.com/evRook_" className="footer--twitter--link">
+                            <FaLinkedin style={{ color: '#333355', fontSize: '30px'}}/>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div className="footer--legal__container">

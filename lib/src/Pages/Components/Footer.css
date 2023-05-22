@@ -27,11 +27,25 @@
     margin-right: 20px;
 }
 
+.footer--lower__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .footer--btn__container {
     display: flex;
 }
 
 .footer--btn__container > * {
+    margin-right: 10px;
+}
+
+.footer--social__container {
+    margin-right: 20px;
+}
+
+.footer--social__container > * {
     margin-right: 10px;
 }
 
