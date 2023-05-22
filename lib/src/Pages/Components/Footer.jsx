@@ -9,9 +9,6 @@ export default function Footer() {
         <div className="footer--content">
             <div className="footer--links__container">
                 <div className="footer--nav__container">
-                    <Link to="/creator" className='header--link'>
-                        <NavBtn title='Creator' onClick={()=>{window.scrollTo(0, 0)}}/>
-                    </Link> 
                     <Link to="/disclosures" className='header--link'>
                         <NavBtn title='Disclosures' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link>

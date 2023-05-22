@@ -47,7 +47,7 @@ export default function Header(props) {
                         </Link>
                         {isAuth ? 
                             <Link to="/profile" className='header--link'>
-                                <NavBtn title='Profile'/>
+                                <NavBtn title='Dashboard'/>
                             </Link>
                         : null }
                     </div>
