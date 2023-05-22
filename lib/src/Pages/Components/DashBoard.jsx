@@ -59,7 +59,7 @@ export default function DashBoard() {
         setUppercase()
         
 
-    }, [])
+    }, [scope])
 
     return ( 
         <div className="db--container">

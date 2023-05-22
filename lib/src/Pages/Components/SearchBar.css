@@ -43,10 +43,3 @@
     background-color: #fb9632;
     color: #feeddb;
 }
-
-.searchbar--btn:active {
-    border-top: none;
-    border-left: none;
-    border-bottom: 2px solid #222222;
-    border-right: 2px solid #222222;
-}

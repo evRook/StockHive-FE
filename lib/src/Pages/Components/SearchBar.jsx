@@ -6,21 +6,34 @@ export default function SearchBar() {
     const navigate = useNavigate()
 
     const [search, setSearch] = useState('')
+    const [prevSearch, setPrevSearch] = useState('')
     const [scope, setScope] = useState('')
+    const [resetKey, setResetKey] = useState(0)
 
     const handleChange = (e) => {
         setSearch(e.target.value)
+        setPrevSearch(e.target.value)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        navigate('/profile', {state: {search: search, scope: scope}})
+        navigate('/profile', {state: {search, scope}})
     }
 
     function handleRefresh(scope){
         setScope(scope)
-        window.location.reload()
+        
+        if(!search){
+            setSearch(prevSearch)
+        }
+        console.log(search)
+        console.log(prevSearch)
+        setResetKey((x)=> x+1)
     }
+
+    useEffect(()=>{
+        console.log('search refresh')
+    }, [resetKey])
 
     return ( 
         <form onSubmit={handleSubmit}>
