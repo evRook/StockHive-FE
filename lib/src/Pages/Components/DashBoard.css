@@ -1,5 +1,6 @@
 .db--container {
     width: 1400px;
+    min-height: 900px;
     padding: 10px;
     display: flex;
     flex-direction: column;

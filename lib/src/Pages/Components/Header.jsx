@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Header(props) {
     const state = useLocation()
     const { auth } = state
-    const [isAuth, setIsAuth] = useState(false)
+    const [isAuth, setIsAuth] = useState(auth)
     const [resetKey, setResetKey] = useState(0)
 
     const logout = () => {
