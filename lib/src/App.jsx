@@ -12,6 +12,7 @@ import {
   Verify,
   Contact,
   Profile,
+  Disclosures,
 } from './Pages'
 
 import {
@@ -39,6 +40,8 @@ const router = createBrowserRouter(
       <Route path='/reset_password' element={<PWReset />} />
       <Route path='/password/reset/confirm/:uid/:token' element={<PWConfirm />} />
       <Route path='/activation/:uid/:token' element={<Verify />} />
+      <Route path='/disclosures' element={<Disclosures />} />
+
     </Route>
   )
 )

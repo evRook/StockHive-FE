@@ -1,6 +1,5 @@
 import React from "react";
 import "./About.css";
-import { WireBtn, SolidBtn, NavBtn } from './Components'
 
 export default function About() {
     return ( 

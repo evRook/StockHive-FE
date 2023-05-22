@@ -9,18 +9,18 @@ export default function Footer() {
         <div className="footer--content">
             <div className="footer--links__container">
                 <div className="footer--nav__container">
-                    <Link to="/" className='header--link'>
-                        <NavBtn title='Product'/>
+                    <Link to="/creator" className='header--link'>
+                        <NavBtn title='Creator' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link> 
-                    <Link to="/" className='header--link'>
-                        <NavBtn title='Creator'/>
-                    </Link> 
-                    <Link to="/" className='header--link'>
-                        <NavBtn title='Disclosures'/>
+                    <Link to="/disclosures" className='header--link'>
+                        <NavBtn title='Disclosures' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link>
                     <Link to="/about" className='header--link'>
-                        <NavBtn title='About'/>
+                        <NavBtn title='About' onClick={()=>{window.scrollTo(0, 0)}}/>
                     </Link>
+                    <Link to="/contact" className='header--link'>
+                        <NavBtn title='Contact' onClick={()=>{window.scrollTo(0, 0)}}/>
+                    </Link> 
                 </div>
                 <div className="footer--btn__container">
                     <Link to="/login" className='header--link'>
