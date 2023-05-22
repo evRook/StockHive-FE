@@ -25,7 +25,7 @@ export default function DoughnutComp(props) {
         },
         rotation: -90,
         circumference: 180,
-        cutout: "75%",
+        cutout: "85%",
         maintainAspectRatio: false,
         responsive: true,
         borderRadius: 50,

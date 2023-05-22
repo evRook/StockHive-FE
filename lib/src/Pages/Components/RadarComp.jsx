@@ -5,7 +5,6 @@ import { Radar } from 'react-chartjs-2'
 
 
 export default function RadarComp(props) {
-    // console.log([props.audit, props.board, props.compensation, props.sh])
     
     const data = {
         labels: [
@@ -31,7 +30,10 @@ export default function RadarComp(props) {
                 min: 0,
                 max: 10,
                 grid: {
-                    color: '#c0530030', // Set the desired color for the scale grid
+                    color: '#00000090', 
+                },
+                angleLines: {
+                    color: '#c0530030',
                 },
                 ticks: {
                     display: false,
