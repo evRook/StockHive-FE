@@ -188,17 +188,7 @@ export default function DashBoard() {
                                 </div>
                             </div>
                         </div>
-                        <div className="db--yearstat__container">
-                            <div className="db--yearstat--txt">
-                                <p className="db--yearstat--title">52 Week</p>
-                            </div>
-                            <div className="db--yearstat">
-                                <p className="db--yearstat--high">High<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/> {company[0].fiftyTwoWeekHigh.toFixed(2)}</p>
-                            </div>
-                            <div className="db--yearstat">
-                                <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/> {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
-                            </div>
-                        </div>
+                       
                     </div>
                     <div className="db--center__subContainer">
                         <div className="db--doghnut__container" id='doughnut2'>
@@ -215,29 +205,35 @@ export default function DashBoard() {
                             </div>
                         </div>
                         <div className="db--yearstat__container">
-                            <div className="db--yearstat--txt">
-                                <p className="db--yearstat--title">52 Week</p>
-                            </div>
-                            <div className="db--yearstat">
-                                <p className="db--yearstat--high">High<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/> {company[0].fiftyTwoWeekHigh.toFixed(2)}</p>
-                            </div>
-                            <div className="db--yearstat">
-                                <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/> {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
-                            </div>
+                            <RadarComp 
+                                audit={company[0].auditRisk}
+                                compensation={company[0].compensationRisk}
+                                board={company[0].boardRisk}
+                                sh={company[0].shareHolderRightsRisk}
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="db--content__container2">
-                <div className="db--misc__container">
-
-                </div>
-            </div>
             <div className="db--info__container">
+                <div className="db--info--content">
+                    div
+                </div>
                 <div className="db--text__container">
                         <p className="db--text">
                             {company[0].longBusinessSummary}
                         </p>
+                </div>
+                <div className="db--yearstat__container">
+                    <div className="db--yearstat--txt">
+                        <p className="db--yearstat--title">52 Week</p>
+                    </div>
+                    <div className="db--yearstat">
+                        <p className="db--yearstat--high">High<HiOutlineChevronDoubleUp style={{ color: '#3efe20' }}/> {company[0].fiftyTwoWeekHigh.toFixed(2)}</p>
+                    </div>
+                    <div className="db--yearstat">
+                        <p className="db--yearstat--low">Low<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/> {company[0].fiftyTwoWeekLow.toFixed(2)}</p>                             
+                    </div>
                 </div>
             </div>
         </div>

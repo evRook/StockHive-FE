@@ -23,12 +23,32 @@ export default function RadarComp(props) {
             borderWidth: 1,
         }],
     }
+
+    const options = {
+        scales: {
+            r: {
+                min: 0,
+                max: 10,
+                grid: {
+                    color: '#c0530030', // Set the desired color for the scale grid
+                },
+                ticks: {
+                    display: false,
+                },
+            },
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+      };
     
 
 
     return ( 
         <div className="chart--container">
-            <Radar data={data} />
+            <Radar data={data} options={options} />
         </div>
      );
 }

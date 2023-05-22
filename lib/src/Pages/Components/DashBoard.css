@@ -127,6 +127,7 @@
 
 .db--center__subContainer {
     display: flex;
+    column-gap: 10px;
 }
 
 .db--doghnut__container {
@@ -135,18 +136,9 @@
     height: 160px;
     padding: 10px;
     margin-bottom: 10px;
-    margin-right: 10px;
     border-radius: 10px;
     background-image: linear-gradient(215deg, #36363c, #282837, #000109);
     color: #fe9320;
-}
-
-#doughnut2 {
-    margin: 0;
-}
-
-#doughnut3 {
-    margin-left: 10px;
 }
 
 .db--doghnut--overlay {
