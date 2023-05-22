@@ -5,7 +5,6 @@ import { HiOutlineChevronDoubleUp, HiOutlineChevronDoubleDown } from "react-icon
 
 
 export default function Ticker({data}) {
-    console.log(data)
     const tickerCards = []
 
     data.map((elem) => {

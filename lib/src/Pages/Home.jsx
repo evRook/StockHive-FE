@@ -16,13 +16,12 @@ export default function Home(props) {
 
     useEffect(() => {
         axios.get(`http://localhost:8000/ticker`)
-        .then((response) => {
-            setTickers(response.data)
-            console.log(tickers)
-        })
-        .catch((error) => {
-            console.log(error)
-        })
+            .then((response) => {
+                setTickers(response.data)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
     }, [])
 
     // useEffect(() => {
@@ -66,7 +65,7 @@ export default function Home(props) {
                 </div>
                 <div className="home--content2">
                     <div className="home--content2--chart">
-                        <ChartHome chartData={chartArr} />
+                        <ChartHome chartData={companyData} />
                     </div> 
                 </div>
                 <div className="home--content3">

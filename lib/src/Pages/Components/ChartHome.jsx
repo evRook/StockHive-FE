@@ -5,6 +5,7 @@ import { Line } from 'react-chartjs-2'
 
 
 export default function ChartHome(props) {
+    console.log(props.chartData)
 
     const data = {
         labels: [],

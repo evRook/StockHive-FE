@@ -9,7 +9,7 @@ export default function TickerCard(props) {
             <p className="tickerCard--title">{props.symbol}</p>
             <div className="tickerCard--content">
                 <div className="tickerCard--text">
-                    <p className="tickerCard--high">{props.current}{props.arrow}</p>
+                    <p className="tickerCard--high">${props.current}{props.arrow}</p>
                 </div>
             </div>
         </div>
