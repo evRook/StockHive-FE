@@ -23,8 +23,6 @@ export default function DashBoard() {
     ])
     const [priceArrow, setPriceArrow] = useState()
     const [key, setKey] = useState()
-    const [uppercase, setUppercase] = useState()
-
 
     let chartComp = null
 
@@ -32,9 +30,6 @@ export default function DashBoard() {
         axios.get(`http://localhost:8000/history/${search}/${scope}`)
             .then((response) => {
                 setChart(response.data)
-                
-        
-                // console.log(response.data)
             })
             .catch((error) => {
                 console.log(error)
@@ -43,8 +38,6 @@ export default function DashBoard() {
         axios.get(`http://localhost:8000/company/${search}`)
             .then((response) => {
                 setCompany(response.data)
-                setUppercase(company[0].recommendationKey.toUpperCase())
-                // console.log(response.data)
             })
             .catch((error) => {
                 console.log(error)
@@ -55,9 +48,6 @@ export default function DashBoard() {
         }else{
             setPriceArrow(<HiOutlineChevronDoubleDown style={{ color: '#ff0000' }}/>)
         }
-
-        setUppercase()
-        
 
     }, [scope])
 
