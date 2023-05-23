@@ -3,7 +3,7 @@ import './DashBoard.css'
 import axios from 'axios'
 import { HiOutlineChevronDoubleUp, HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { useLocation } from "react-router-dom";
-import { ChartComp, DoughnutComp, SearchBar, RadarComp } from './index'
+import { ChartComp, DoughnutComp, SearchBar, RadarComp, FavoriteBtn } from './index'
 
 export default function DashBoard() {
     const { state } = useLocation()
@@ -64,18 +64,22 @@ export default function DashBoard() {
     return ( 
         <div className="db--container">
             <div className="db--header__container">
-                <div className="db--title">
-                    <p className="db--title--text">
-                        {company[0].shortName}
-                    </p>
-                    <p className="db--title--ticker">
-                        ({company[0].symbol})
-                    </p>
-                    <p className="db--title--current">
-                        ${company[0].currentPrice}{priceArrow}
-                    </p>
+                <div className="db--header__subContainer">
+                    <FavoriteBtn />
+                    <div className="db--title">
+                        <p className="db--title--text">
+                            {company[0].shortName}
+                        </p>
+                        <p className="db--title--ticker">
+                            ({company[0].symbol})
+                        </p>
+                        <p className="db--title--current">
+                            ${company[0].currentPrice}{priceArrow}
+                        </p>
+                    </div>
                 </div>
                 <div className="db--header--search">
+                    
                     <SearchBar />
                 </div>
             </div>

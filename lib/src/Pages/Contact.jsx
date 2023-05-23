@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Contact.css'
 
 export default function Contact() {
+
+    // const send = () => {
+
+    // }
+
     return ( 
         <div className="contact--container">
             <div className="contact--sub__container">
@@ -17,6 +22,7 @@ export default function Contact() {
                     <div className="contact--form__container">
                         <form 
                             className='contact--form'
+                            // onSubmit={send}
                         >
                             <label>Name:</label>
                             <input 
@@ -24,6 +30,7 @@ export default function Contact() {
                                 type='text'
                                 placeholder='Name'
                                 className='contact--form--input'
+                                required
                             />
                             <label>Email:</label>
                             <input 
@@ -31,6 +38,7 @@ export default function Contact() {
                                 type='email'
                                 placeholder='Email'
                                 className='contact--form--input'
+                                required
                             />
                             <label>Message:</label>
                             <textarea 
@@ -39,6 +47,7 @@ export default function Contact() {
                                 placeholder='1000 Character Limit*'
                                 maxLength='1000'
                                 className='contact--form--textField'
+                                required
                             />
                             <button type='submit' className='contact--form--btn'>Send</button>
                         </form>

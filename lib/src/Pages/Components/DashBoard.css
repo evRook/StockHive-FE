@@ -1,6 +1,7 @@
 .db--container {
     width: 1400px;
-    min-height: 900px;
+    min-height: 630px;
+    margin: 150px 0;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -31,7 +32,7 @@
 }
 
 .db--title--text {
-    margin: 15px 10px;
+    margin: 10px 10px 15px 10px;
     font-size: 30px;
 }
 

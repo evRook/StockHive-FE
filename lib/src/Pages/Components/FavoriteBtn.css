@@ -1,0 +1,24 @@
+.favoritebtn--container {
+    padding: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.favoritebtn--btn {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #fe9320;
+    background-color: #00000000;
+    color: #fe9320;
+    cursor: pointer;
+}
+
+.favoritebtn--btn:hover {
+    background-color: #fe9320;
+    color: #feeddb;
+}
