@@ -10,7 +10,7 @@ export default function Login({handleAuth}) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    let user = JSON.parse(localStorage.getItem('user'))
+    // let user = JSON.parse(localStorage.getItem('user'))
 
     function handleSubmit(e){
         e.preventDefault()
@@ -33,12 +33,19 @@ export default function Login({handleAuth}) {
 
         window.localStorage.removeItem('user')
 
+        function decodeJWT(token){
+            const payload = token.split('.')[1]
+            const decodedPayload = atob(payload)
+            return JSON.parse(decodedPayload)
+        }
+
         axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
             .then((response) => {
                 if(response.status === 200){
-                    localStorage.setItem('user', JSON.stringify(response.data))
+                    const decodedToken = decodeJWT(response.data.access)
+                    localStorage.setItem('user', [decodedToken.user_id, JSON.stringify(response.data)])
                     alert('Logged In Successfully')
-                    navigate('/profile', { state: { auth: true }})
+                    navigate('/profile')
                 }
                 
                 return response.data
