@@ -47,7 +47,7 @@ export default function Home(props) {
                     <p className="home--header--title">
                         StockHive 
                     </p>
-                    <p className="home--header--text">
+                    <p className="home--header--title--text" id="title-text">
                         Find Clarity in Investing
                     </p>
                 </div>
