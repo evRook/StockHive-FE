@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
 import { WireBtn, SolidBtn, NavBtn, SearchBar } from './index'
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export default function Header(props) {
-    const state = useLocation()
-    const { auth } = state
     const [isAuth, setIsAuth] = useState(false)
     const [resetKey, setResetKey] = useState(0)
 
@@ -15,17 +13,12 @@ export default function Header(props) {
         console.log(window.localStorage)
         window.localStorage.removeItem('user')
         setIsAuth(false)
-        setResetKey((x)=> x+1)
     }
 
-    // useEffect(() => {
-    //     console.log('header refreshed')
-    // }, [resetKey])
-
-    // useEffect(() => {
-    //     console.log('auth refreshed')
-    //     setIsAuth(auth)
-    // }, [auth])
+    useEffect(() => {
+        console.log('header refreshed')
+        setIsAuth(props.headerAuth)
+    }, [props.headerAuth])
 
     return (
         <div className="header--container">
