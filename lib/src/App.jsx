@@ -44,16 +44,7 @@ const isAuthenticated = () => {
 
 const ProtectedRoute = ({element: Element}) => {
   const navigate = useNavigate()
-  // const [isAuth, setIsAuth] = useState(false)
-  
-  // useEffect(() => {
-  //   if(!isAuthenticated()){
-  //     setIsAuth(false)
-  //   }else{
-  //     setIsAuth(true)
-  //   }
-  // },[navigate])
-  
+ 
   if(!isAuthenticated()){
     navigate('/login') 
   }else{
@@ -61,9 +52,24 @@ const ProtectedRoute = ({element: Element}) => {
   }
 }
 
+const CheckAuthentication = ({element: Element}) => {
+  const navigate = useNavigate()
+  const [headerAuth, setHeaderAuth] = useState(false)
+
+  useEffect(() => {
+    if(!isAuthenticated()){
+      setHeaderAuth(false)
+    }else{
+      setHeaderAuth(true)
+    }
+  },[navigate])
+  
+  return <Element headerAuth={headerAuth}/> 
+}
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout />}>
+    <Route path='/' element={<CheckAuthentication element={Layout}/>}>
       <Route index element={<Home />} loader={chartLoader}/>
       <Route path='/about' element={<About />} />
       <Route path='/login' element={<Login />} />
