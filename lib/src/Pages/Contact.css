@@ -92,3 +92,71 @@
     border: none;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 910px){
+    .contact--container {
+        width: 100%;
+        padding: 100px 10px;  
+    }
+
+    .contact--img__container {
+        display: none;
+    }
+
+    .contact--sub__container {
+        width: 92%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact--content__container {
+        margin: 0;
+    }
+
+    .contact--img__container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 690px){
+    .contact--content__container {
+        width: 400px;
+        padding: 0 20px;
+    }
+
+    .contact--form__container {
+        padding: 20px 20px;
+        width: 200px;
+    }
+
+    .contact--title__container {
+        padding: 0 20px;
+    }
+
+    .contact--link__container{
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .contact--content__container {
+        width: 300px;
+        padding: 0 20px;
+    }
+    .contact--container {
+        padding: 100px 0px;  
+    }
+
+    .contact--form {
+        width: 260px;
+    }
+
+    .contact--form > * {
+        width: 260px;
+    }
+
+    .contact--title {
+        font-size: 20px;
+        margin-right: 50px;
+    }
+}
