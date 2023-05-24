@@ -46,6 +46,7 @@ export default function Login({handleAuth}) {
                     localStorage.setItem('user', [decodedToken.user_id, JSON.stringify(response.data)])
                     alert('Logged In Successfully')
                     navigate('/profile')
+                    window.location.reload()
                 }
                 
                 return response.data
