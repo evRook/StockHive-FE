@@ -93,3 +93,58 @@
 .header--link {
     color: #feeddb;
 }
+
+@media screen and (max-width: 815px){
+    .login--container {
+        width: 100%;
+        padding: 100px 10px;  
+    }
+
+    .login--sub__container {
+        width: 92%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .login--content__container {
+        margin: 0;
+    }
+
+    .login--img__container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 590px){
+    .login--content__container {
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 575px){
+    .login--container {
+        padding: 100px 0px;  
+    }
+
+    .login--title__container {
+        padding: 0 20px;
+    }
+
+    .login--form__container {
+        padding: 20px 20px;
+    }
+
+    .login--link__container{
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 422px){
+    .login--form {
+        width: 200px;
+    }
+
+    .login--title {
+        margin-right: 50px;
+    }
+}
