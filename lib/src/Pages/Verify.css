@@ -43,3 +43,13 @@
     color: #fe9320;
     text-shadow: 0px 0px 10px #000000;
 }
+
+@media screen and (max-width: 500px){
+    .verify--text__container {
+        text-align: center;
+    }
+
+    .verify--text__container > * {
+        padding:0 10px;
+    }
+}
