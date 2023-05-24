@@ -56,3 +56,28 @@
     height: 100px;
 }
 
+
+@media screen and (max-width: 1180px){
+    .about--img__container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .about--container {
+        padding: 100px 40px 100px 40px;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .about--container {
+        padding: 100px 10px 100px 10px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .about--content {
+        height: 100%;
+        padding: 60px 20px
+    }
+}
