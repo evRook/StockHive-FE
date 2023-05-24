@@ -234,3 +234,15 @@
         background-image: none;
     }
 }
+
+@media screen and (max-width: 510px) {
+    .home--content4 {
+        height: 200px;
+    }
+
+    .home--content4--content {
+        height: 100px;
+        width: 230px;
+        padding: 0 10px;
+    }
+}
