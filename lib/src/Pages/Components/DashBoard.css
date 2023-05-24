@@ -52,6 +52,7 @@
 .db--content__container {
     width: 100%;
     display: flex;
+    column-gap: 10px;
     align-items: start;
     border-radius: 10px;
 }
@@ -67,15 +68,14 @@
 }
 
 .db--companyInfo__container {
-    margin-right: 10px;
     padding: 10px;
     width: 190px;
     height: 350px;
     border-radius: 10px;
-    background-image: linear-gradient(255deg, #36363c, #202026, #070a23);
+    background-image: linear-gradient(215deg, #36363c, #31313a, #000109);
 }
 
-.bd--companyInfo__subContainer {
+.db--companyInfo__subContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,11 +98,15 @@
     border: 1px solid #3d3d3d87;
 }
 
-.db--chart__container{
-    margin-right: 10px;
+.db--chart__wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    column-gap: 10px;
+}
+
+.db--chart__container{
+    display: flex;
+    justify-content: center;
 }
 
 .db--line__container {
@@ -123,12 +127,14 @@
 
 .db--center__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
 }
 
 .db--center__subContainer {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     column-gap: 10px;
 }
 
@@ -193,8 +199,6 @@
     margin-top: 35px;
 }
 
-
-
 .db--yearstat__container {
     width: 160px;
     height: 160px;
@@ -224,9 +228,8 @@
 
 .db--radar__container {
     width: 340px;
-    height: 300px;
-    padding: 10px 10px 58px 10px;
-    margin-left: 10px;
+    height: 350px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -254,4 +257,145 @@
     margin-bottom: 10px;
     height: 300px;
     width: 100%;
+}
+
+@media screen and (max-width: 1430px){
+    .db--container {
+        width: 1180px;
+    }
+
+    .db--content__container {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .db--companyInfo__container {
+        height: 40px;
+        width: 98.3%;
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .db--companyInfo__subContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .db--chart__wrapper {
+        display: flex;
+    }
+
+    .db--chart__container {
+        width: 100%;
+    }
+
+    .db--text__container {
+        width: 95.7%;
+    }
+}
+
+@media screen and (max-width: 1215px){
+    .db--container {
+        width: 625px;
+        margin: 30px 0;
+    }
+
+    .db--companyInfo__container {
+        height: 190px;
+        width: 96.3%;
+        row-gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .db--companyInfo__subContainer {
+        width: 298px;
+    }
+
+    .db--chart__wrapper {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .db--center__container {
+        justify-content: space-between;
+    }
+
+    .db--radar__container {
+        width: 100%;
+    }
+
+    .db--text__container {
+        width: 91.5%;
+    }
+}
+
+@media screen and (max-width: 675px){
+    .db--container {
+        width: 375px; 
+    }
+
+    .db--header__container {
+        height: 250px;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .db--title {
+        flex-direction: column;
+    }
+
+    .db--title > *{
+        margin: 10px 0px 0px 10px;
+    }
+
+    .db--header--search {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .db--companyInfo__container {
+        height: 240px;
+        width: 95.3%;
+        row-gap: 10px;
+    }
+
+    .db--companyInfo__subContainer {
+        width: 98px;
+        height: 50px;
+        justify-content: start;
+    }
+
+    .db--companyInfo--text {
+        text-align: start;
+    }
+
+    .db--chart__container {
+        width: 375px;
+    }
+
+    .db--line__container {
+        width: 355px;
+        height: 250px;
+    }
+
+    .db--center__container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .db--center__subContainer {
+        flex-direction: row;
+    }
+
+    .db--radar__container {
+        width: 94%;
+        margin-bottom: 10px;
+    }
+
+    .db--text__container {
+        width: 86.5%;
+    }
 }

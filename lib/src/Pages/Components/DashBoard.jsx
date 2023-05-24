@@ -70,13 +70,12 @@ export default function DashBoard() {
                     </div>
                 </div>
                 <div className="db--header--search">
-                    
                     <SearchBar />
                 </div>
             </div>
             <div className="db--content__container">
                 <div className="db--companyInfo__container">
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Previous Close:
                         </p>
@@ -85,7 +84,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Open:
                         </p>
@@ -94,7 +93,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Day's Range:
                         </p>
@@ -103,7 +102,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             52 Week Range:
                         </p>
@@ -112,7 +111,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Volume:
                         </p>
@@ -121,7 +120,7 @@ export default function DashBoard() {
                         </p>                        
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Avg. Volume:
                         </p>
@@ -130,7 +129,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Beta:
                         </p>
@@ -139,7 +138,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Market Cap:
                         </p>
@@ -148,7 +147,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             Target:
                         </p>
@@ -157,7 +156,7 @@ export default function DashBoard() {
                         </p>
                     </div>
                     <hr className='db--companyInfo--hr'/>
-                    <div className="bd--companyInfo__subContainer">
+                    <div className="db--companyInfo__subContainer">
                         <p className="db--companyInfo--title">
                             PE Ratio:
                         </p>
@@ -166,47 +165,51 @@ export default function DashBoard() {
                         </p>
                     </div>
                 </div>
-                <div className="db--chart__container">
-                    <div className="db--line__container">
-                        <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
-                    </div>
-                </div>
-                <div className="db--center__container">
-                    <div className="db--doghnut__container"  id='doughnut1'>
-                        <DoughnutComp risk={company[0].overallRisk} limit={10}/>
-                        <div className="db--doghnut--overlay">
-                            <p className="db--doghnut--title">Overall Risk</p>
-                            <div className="db--doughnut--rank">
-                                <p>0</p>
-                                <p>10</p>
-                            </div>
+                <div className="db--chart__wrapper">
+                    <div className="db--chart__container">
+                        <div className="db--line__container">
+                            <ChartComp close={chart[0].Close} symbol={chart[0].symbol} />
                         </div>
                     </div>
-                    <div className="db--doghnut__container" id='doughnut2'>
-                        <DoughnutComp risk={company[0].recommendationMean} limit={5}/>
-                        <div className="db--doghnut--overlay">
-                            <p className="db--doghnut--title2">Analyst Recommendation</p>
-                            <div className="db--doughnut--key">
-                                <p>{company[0].recommendationKey}</p>
+                    <div className="db--center__container">
+                        <div className="db--center__subContainer">
+                            <div className="db--doghnut__container"  id='doughnut1'>
+                                <DoughnutComp risk={company[0].overallRisk} limit={10}/>
+                                <div className="db--doghnut--overlay">
+                                    <p className="db--doghnut--title">Overall Risk</p>
+                                    <div className="db--doughnut--rank">
+                                        <p>0</p>
+                                        <p>10</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="db--doughnut--rank">
-                                <p>1</p>
-                                <p>5</p>
+                            <div className="db--doghnut__container" id='doughnut2'>
+                                <DoughnutComp risk={company[0].recommendationMean} limit={5}/>
+                                <div className="db--doghnut--overlay">
+                                    <p className="db--doghnut--title2">Analyst Recommendation</p>
+                                    <div className="db--doughnut--key">
+                                        <p>{company[0].recommendationKey}</p>
+                                    </div>
+                                    <div className="db--doughnut--rank">
+                                        <p>1</p>
+                                        <p>5</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div className="db--radar__container">
-                    <div className="db--radar--title">
-                        <p>Investor Risks</p>
-                    </div>
-                    <div className="db--radar">
-                        <RadarComp 
-                            audit={company[0].auditRisk}
-                            compensation={company[0].compensationRisk}
-                            board={company[0].boardRisk}
-                            sh={company[0].shareHolderRightsRisk}
-                        />
+                        <div className="db--radar__container">
+                            <div className="db--radar--title">
+                                <p>Investor Risks</p>
+                            </div>
+                            <div className="db--radar">
+                                <RadarComp 
+                                    audit={company[0].auditRisk}
+                                    compensation={company[0].compensationRisk}
+                                    board={company[0].boardRisk}
+                                    sh={company[0].shareHolderRightsRisk}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
