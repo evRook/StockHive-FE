@@ -15,7 +15,7 @@ export default function Home(props) {
     let tickerArr = []
 
     useEffect(() => {
-        axios.get(`http://localhost:8000/ticker`)
+        axios.get(`https://stockhive-be.onrender.com/ticker`)
             .then((response) => {
                 setTickers(response.data)
             })

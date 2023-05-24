@@ -36,7 +36,7 @@ export default function SignUp() {
         const dataStr = JSON.stringify(submit_data)
 
 
-        axios.post('http://localhost:8000/auth/users/', dataStr, headers)
+        axios.post('https://stockhive-be.onrender.com/auth/users/', dataStr, headers)
             .then((response) => {
                 response.json()
             })

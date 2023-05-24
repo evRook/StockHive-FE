@@ -29,7 +29,7 @@ export default function Verify() {
 
         const dataStr = JSON.stringify(data)
 
-        axios.post('http://localhost:8000/auth/users/activation/', dataStr, headers)
+        axios.post('https://stockhive-be.onrender.com/auth/users/activation/', dataStr, headers)
             .then((response) => {
                 response.json()
             })

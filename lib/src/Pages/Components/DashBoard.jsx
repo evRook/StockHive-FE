@@ -28,7 +28,7 @@ export default function DashBoard() {
     let chartComp = null
     
     useEffect(() => {
-        axios.get(`http://localhost:8000/history/${search}/${scope}`)
+        axios.get(`https://stockhive-be.onrender.com//history/${search}/${scope}`)
             .then((response) => {
                 setChart(response.data)
             })
@@ -36,7 +36,7 @@ export default function DashBoard() {
                 console.log(error)
             })
 
-        axios.get(`http://localhost:8000/company/${search}`)
+        axios.get(`https://stockhive-be.onrender.com//company/${search}`)
             .then((response) => {
                 setCompany(response.data)
             })

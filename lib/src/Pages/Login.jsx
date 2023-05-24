@@ -39,7 +39,7 @@ export default function Login({handleAuth}) {
             return JSON.parse(decodedPayload)
         }
 
-        axios.post('http://localhost:8000/auth/jwt/create', dataStr, headers)
+        axios.post('https://stockhive-be.onrender.com/auth/jwt/create', dataStr, headers)
             .then((response) => {
                 if(response.status === 200){
                     const decodedToken = decodeJWT(response.data.access)

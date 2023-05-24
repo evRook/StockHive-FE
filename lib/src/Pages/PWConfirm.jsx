@@ -34,7 +34,7 @@ export default function PWConfirm() {
 
         const dataStr = JSON.stringify(data)
 
-        axios.post('http://localhost:8000/auth/users/Confirm_password_confirm/', dataStr, headers)
+        axios.post('https://stockhive-be.onrender.com/auth/users/Confirm_password_confirm/', dataStr, headers)
             .then((response) => {
                 response.json()
             })

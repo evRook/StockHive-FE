@@ -35,13 +35,13 @@ export default function FavoriteBtn(props) {
         const dataStr = JSON.stringify(data)
         const pkString = props.pk.toString()
 
-        await axios.post(`http://localhost:8000/users/favorites/${pkString}/create`, dataStr, headers)
-            .then((response) => {
-                console.log(response)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
+        // await axios.post(`http://localhost:8000/users/favorites/${pkString}/create`, dataStr, headers)
+        //     .then((response) => {
+        //         console.log(response)
+        //     })
+        //     .catch((error) => {
+        //         console.log(error)
+        //     })
 
     }
     

@@ -30,7 +30,7 @@ export default function PWReset() {
 
         const dataStr = JSON.stringify(data)
 
-        axios.post('http://localhost:8000/auth/users/reset_password/', dataStr, headers)
+        axios.post('https://stockhive-be.onrender.com/auth/users/reset_password/', dataStr, headers)
             .then((response) => {
                 response.json()
             })
