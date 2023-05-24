@@ -7,7 +7,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Header(props) {
     const state = useLocation()
     const { auth } = state
-    const [isAuth, setIsAuth] = useState(auth)
+    const [isAuth, setIsAuth] = useState(false)
     const [resetKey, setResetKey] = useState(0)
 
     const logout = () => {
@@ -18,14 +18,14 @@ export default function Header(props) {
         setResetKey((x)=> x+1)
     }
 
-    useEffect(()=>{
-        console.log('header refreshed')
-    }, [resetKey])
+    // useEffect(() => {
+    //     console.log('header refreshed')
+    // }, [resetKey])
 
-    useEffect(()=>{
-        console.log('auth refreshed')
-        setIsAuth(auth)
-    }, [auth])
+    // useEffect(() => {
+    //     console.log('auth refreshed')
+    //     setIsAuth(auth)
+    // }, [auth])
 
     return (
         <div className="header--container">
