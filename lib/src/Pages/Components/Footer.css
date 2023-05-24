@@ -60,3 +60,47 @@
 .footer--legal--title {
     font-weight: 500;
 }
+
+@media screen and (max-width: 1001px){
+    .footer--content{
+        flex-direction: column-reverse;
+    }
+
+    .footer--legal__container {
+        width: 95%;
+        margin-left: 10px;
+        padding: 10px;
+        border-left: none;
+        border-bottom: 2px solid black;
+    }
+
+    .footer--lower__container {
+        margin-left: 5px;
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: start;
+    }
+
+    /* .footer--social__container {
+        display: flex;
+        flex-direction: column;
+    } */
+}
+
+@media screen and (max-width: 800px){
+    .footer--legal__container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 615px){
+    .footer--container{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .footer--legal__container {
+        display: none;
+    }
+
+}
