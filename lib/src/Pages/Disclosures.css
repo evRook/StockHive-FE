@@ -15,7 +15,7 @@
 }
 
 .disclosures--content {
-    height: 1000px;
+    height: 100%;
     width: 800px;
     padding: 100px;
     display: flex;
@@ -51,3 +51,36 @@
 .disclosures--img {
     height: 100px;
 }
+
+
+@media screen and (max-width: 1300px) {
+    .disclosures--content {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .disclosures--container {
+        padding: 100px 0;
+    }
+
+    .disclosures--img__container {
+        display: none;
+    }
+
+    .disclosures--content {
+        
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .disclosures--title {
+        font-size: 25px;
+    }
+
+    .disclosures--img {
+        height: 70px;
+    }
+}
+
+
+
