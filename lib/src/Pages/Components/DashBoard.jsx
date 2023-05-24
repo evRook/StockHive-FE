@@ -8,6 +8,7 @@ import { ChartComp, DoughnutComp, SearchBar, RadarComp, FavoriteBtn } from './in
 export default function DashBoard() {
     const { state } = useLocation()
     const { search, scope } = state || { search: 'aapl', scope: '1mo'}
+    const user = window.localStorage.getItem('user')
     const [chart, setChart] = useState([
         {   
             symbol: 'Null',
@@ -25,7 +26,7 @@ export default function DashBoard() {
     const [key, setKey] = useState()
 
     let chartComp = null
-
+    
     useEffect(() => {
         axios.get(`http://localhost:8000/history/${search}/${scope}`)
             .then((response) => {
@@ -55,7 +56,7 @@ export default function DashBoard() {
         <div className="db--container">
             <div className="db--header__container">
                 <div className="db--header__subContainer">
-                    <FavoriteBtn />
+                    {/* <FavoriteBtn symbol={company[0].symbol} shortName={company[0].shortName} pk={user[0]} /> */}
                     <div className="db--title">
                         <p className="db--title--text">
                             {company[0].shortName}

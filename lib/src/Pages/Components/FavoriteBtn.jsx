@@ -9,7 +9,7 @@ export default function FavoriteBtn(props) {
     const [favorite, setFavorite] = useState(false)
     const [userId, setUserId] = useState()
 
-    function handleClick(){
+    const handleClick = async () => {
         if(favorite === true){
             setFavorite(false)
             setHeart(<FaHeart />) 
@@ -17,33 +17,31 @@ export default function FavoriteBtn(props) {
             setFavorite(true)
             setHeart(<FaRegHeart />)
         }
-    }
 
-
-    function handleSubmit(){
-        // const data = {
-        //     'symbol': {props.symbol},
-        //     'shortName': {props.shortName}
-        // }
+        const data = {
+            'symbol': props.symbol,
+            'shortName': props.shortName
+        }
 
         const csrfToken = Cookies.get('csrftoken')
 
         const headers = {
             headers: {
-                'Content-type': 'application/json',
+                'Content-Type': 'application/json',
                 'X-CSRFToken': csrfToken,
             }
         }
 
-        // const dataStr = JSON.stringify(data)
+        const dataStr = JSON.stringify(data)
+        const pkString = props.pk.toString()
 
-        // axios.post(`http://localhost:8000/users/favorites/${user_id}`, dataStr, headers)
-        //     .then((response) => {
-        //         console.log(response)
-        //     })
-        //     .catch((error) => {
-        //         console.log(error)
-        //     })
+        await axios.post(`http://localhost:8000/users/favorites/${pkString}/create`, dataStr, headers)
+            .then((response) => {
+                console.log(response)
+            })
+            .catch((error) => {
+                console.log(error)
+            })
 
     }
     
