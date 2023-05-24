@@ -65,3 +65,24 @@
     border: none;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 580px){
+    .PWConfirm--form__container {
+        padding: 0 20px;
+    }
+
+    .PWConfirm--title {
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 405px){
+    .PWConfirm--form {
+        width: 200px;
+    }
+
+    .PWConfirm--form--input {
+        width: 200px;
+    }
+}

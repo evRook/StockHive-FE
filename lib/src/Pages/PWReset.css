@@ -65,3 +65,24 @@
     border: none;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 580px){
+    .PWReset--form__container {
+        padding: 0 20px;
+    }
+
+    .PWReset--title {
+        margin: 20px 0;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 405px){
+    .PWReset--form {
+        width: 200px;
+    }
+
+    .PWReset--form--input {
+        width: 200px;
+    }
+}
