@@ -46,6 +46,13 @@
 
 <br/>
 
+## Later Additions:
+
+- User favorites and favorited stock hot bar
+- Paper trading
+- AI stock predictions
+
+
 ## Contribution:
 
 ### Contributions to the project are welcome! If you find any bugs or want to add new features, feel free to open an issue or submit a pull request. 
