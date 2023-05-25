@@ -39,6 +39,7 @@ export default function SignUp() {
         axios.post('https://stockhive-be.onrender.com/auth/users/', dataStr, headers)
             .then((response) => {
                 response.json()
+                alert('Please Verify Your Email')
             })
             .then((response) => {
                 console.log(response)
